@@ -1,8 +1,9 @@
-import React from "react"
-import "../css/bootstrap.css"
-import "../css/animate.css"
-import { StandardHeader } from "../ProductsComponents"
-import { Accordion, Footer } from "../Components"
+import React from "react";
+import "../css/bootstrap.css";
+import "../css/homepage.css";
+import "../css/animate.css";
+import { StandardHeader } from "../ProductsComponents";
+import { Accordion, Footer } from "../Components";
 
 export default class Transparency extends React.Component {
   Description = () => {
@@ -47,7 +48,7 @@ export default class Transparency extends React.Component {
           },
         ],
       },
-    ]
+    ];
     return (
       <div className="bg-white p-128 maxer mx-auto">
         <div className="mx-lg-1 px-4">
@@ -63,8 +64,8 @@ export default class Transparency extends React.Component {
           <Accordion contents={accordion} />
         </div>
       </div>
-    )
-  }
+    );
+  };
   render() {
     return (
       <div>
@@ -83,6 +84,6 @@ export default class Transparency extends React.Component {
         <this.Description />
         <Footer />
       </div>
-    )
+    );
   }
 }

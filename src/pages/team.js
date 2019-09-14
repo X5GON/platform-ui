@@ -1,8 +1,9 @@
-import React from "react"
-import "../css/bootstrap.css"
-import "../css/team.css"
-import "../css/animate.css"
-import { Navbar, Footer } from "../Components"
+import React from "react";
+import "../css/bootstrap.css";
+import "../css/homepage.css";
+import "../css/team.css";
+import "../css/animate.css";
+import { Navbar, Footer } from "../Components";
 
 class Team extends React.Component {
   Team = () => {
@@ -47,7 +48,7 @@ class Team extends React.Component {
         position: "Chief Operating Officer, Knowledge 4 All Fundation",
         photo: "davor.jpg",
       },
-    ]
+    ];
     return (
       <div className="p-5 products" id="products">
         <div className="maxer mx-auto">
@@ -80,14 +81,14 @@ class Team extends React.Component {
                       </p>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
   render() {
     return (
       <div className="bg-sky">
@@ -95,8 +96,8 @@ class Team extends React.Component {
         <this.Team />
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Team
+export default Team;

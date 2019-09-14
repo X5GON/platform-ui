@@ -1,8 +1,9 @@
-import React from "react"
-import "../../css/bootstrap.css"
+import React from "react";
+import "../../css/bootstrap.css";
+import "../../css/homepage.css";
 
-import { MoreProducts, Footer } from "../../Components"
-import { StandardHeader, MakeParagraphs } from "../../ProductsComponents"
+import { MoreProducts, Footer } from "../../Components";
+import { StandardHeader, MakeParagraphs } from "../../ProductsComponents";
 
 export default class Analytics extends React.Component {
   Description = () => {
@@ -14,7 +15,7 @@ export default class Analytics extends React.Component {
       [
         "We achieve this first by creating an Automatic Speech Recognition system for automatic transcription of OER in different languages, for example English, Spanish, Slovene and German, then we use Machine Translation tools for translating those OER. The analytics engine therefore provides the relevant knowledge required to drive the operation of the OER and social network across OER sites with content in different languages. While doing this we paid attention to two important aspects, fine-grained indexation of educational videos by transcription tools, and investigation of multicultural, pedagogical and juridical issues, with particular care on privacy. Our machine translation systems are on par with Google Translate for all our language pairs.",
       ],
-    ]
+    ];
     return (
       <div className="bg-white p-128 maxer mx-auto">
         <div className="mx-lg-1 px-4">
@@ -28,11 +29,11 @@ export default class Analytics extends React.Component {
           <MakeParagraphs object={contents} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
-    const currentProduct = "Analytics"
+    const currentProduct = "Analytics";
     return (
       <div>
         <StandardHeader
@@ -49,6 +50,6 @@ export default class Analytics extends React.Component {
         <MoreProducts current={currentProduct} padding />
         <Footer />
       </div>
-    )
+    );
   }
 }

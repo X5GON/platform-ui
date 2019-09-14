@@ -1,8 +1,9 @@
-import React from "react"
-import "../../css/bootstrap.css"
+import React from "react";
+import "../../css/bootstrap.css";
+import "../../css/homepage.css";
 
-import { MoreProducts, Footer } from "../../Components"
-import { StandardHeader, MakeParagraphs } from "../../ProductsComponents"
+import { MoreProducts, Footer } from "../../Components";
+import { StandardHeader, MakeParagraphs } from "../../ProductsComponents";
 
 export default class Discovery extends React.Component {
   Description = () => {
@@ -10,7 +11,7 @@ export default class Discovery extends React.Component {
       [
         "The materials shown currently are text, video and audio. They are enriched them through a process called Wikification and stored into a database that contains data about user activities on the OER repositories that integrated the Connect Service, a library developed for acquiring behavior data. ",
       ],
-    ]
+    ];
     return (
       <div className="bg-white p-128 maxer mx-auto">
         <div className="mx-lg-1 px-4">
@@ -23,11 +24,11 @@ export default class Discovery extends React.Component {
           <MakeParagraphs object={contents} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
-    const currentProduct = "Discovery"
+    const currentProduct = "Discovery";
     return (
       <div>
         <StandardHeader
@@ -44,6 +45,6 @@ export default class Discovery extends React.Component {
         <MoreProducts current={currentProduct} padding />
         <Footer />
       </div>
-    )
+    );
   }
 }

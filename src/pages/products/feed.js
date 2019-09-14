@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/bootstrap.css";
 import "../../css/feed.css";
+import "../../css/homepage.css";
 import "../../css/animate.css";
 import { StandardHeader } from "../../ProductsComponents";
 import { MoreProducts, Footer } from "../../Components";

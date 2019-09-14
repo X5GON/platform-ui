@@ -1,8 +1,8 @@
-import React from "react"
-import "../../css/bootstrap.css"
-
-import { MoreProducts, Footer } from "../../Components"
-import { StandardHeader, MakeParagraphs } from "../../ProductsComponents"
+import React from "react";
+import "../../css/bootstrap.css";
+import "../../css/homepage.css";
+import { MoreProducts, Footer } from "../../Components";
+import { StandardHeader, MakeParagraphs } from "../../ProductsComponents";
 
 export default class Recommend extends React.Component {
   Description = () => {
@@ -15,7 +15,7 @@ export default class Recommend extends React.Component {
         "On top of this we have developed a global cross-site and cross-lingual recommendation engine. It uses machine learning techniques for their core, and semantic technologies to ensure valid combinations of recommended materials and existing skills of the user.",
         "Cross-site recommendation uses content models of learning materials to identify related and complementary learning materials between sites. Cross-lingual aspects are handled by using Wikipedia, and comparing text documents across top 100 Wikipedia languages.",
       ],
-    ]
+    ];
     return (
       <div className="bg-white p-128 maxer mx-auto">
         <div className="mx-lg-1 px-4">
@@ -30,11 +30,11 @@ export default class Recommend extends React.Component {
           <MakeParagraphs object={contents} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
-    const currentProduct = "Recommend"
+    const currentProduct = "Recommend";
     return (
       <div>
         <StandardHeader
@@ -51,6 +51,6 @@ export default class Recommend extends React.Component {
         <MoreProducts current={currentProduct} padding />
         <Footer />
       </div>
-    )
+    );
   }
 }

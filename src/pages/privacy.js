@@ -1,8 +1,9 @@
-import React from "react"
-import "../css/bootstrap.css"
-import "../css/feed.css"
-import "../css/animate.css"
-import { Navbar, Footer } from "../Components"
+import React from "react";
+import "../css/bootstrap.css";
+import "../css/homepage.css";
+import "../css/feed.css";
+import "../css/animate.css";
+import { Navbar, Footer } from "../Components";
 
 class Privacy extends React.Component {
   Privacy = () => {
@@ -201,8 +202,8 @@ class Privacy extends React.Component {
           </li>
         </ul>
       </div>
-    )
-  }
+    );
+  };
   render() {
     return (
       <div>
@@ -210,8 +211,8 @@ class Privacy extends React.Component {
         <this.Privacy />
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Privacy
+export default Privacy;
