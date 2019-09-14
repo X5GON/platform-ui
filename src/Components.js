@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React /* , { useState, useEffect } */ from 'react';
 import './css/bootstrap.css';
 import './css/components.css';
 import { Link } from 'gatsby';
@@ -184,10 +184,7 @@ export const Footer = () => {
 		return (
 			<div
 				className={
-					'col-6 col-md-3 pl-0 pb-5 ' +
-					((name === 'PRODUCTS' || name === 'CONTACT') && CurrentWidth() < 768
-						? 'order-last'
-						: null)
+					'col-6 col-md-3 pl-0 pb-5'
 				}
 			>
 				<p
@@ -253,7 +250,7 @@ export const Footer = () => {
 					</Link>
 				</div>
 				<div className="col-md-9 col-lg-8 col-12 mt-4 mt-md-0 pl-3 ml-1 pl-md-0 ml-md-0">
-					<div className="row border-bottom">
+					<div className="row border-bottom flex-row-reverse flex-md-row">
 						<UL name="GO-TO"></UL>
 						<UL name="PRODUCTS"></UL>
 						<UL name="CONTACT"></UL>
@@ -425,24 +422,25 @@ export const MoreProducts = props => {
 	);
 };
 
-export const CurrentWidth = () => {
+/* export const CurrentWidth = () => {
 	const firstWidth = () => {
 		if (typeof window !== `undefined`) {
 			return window.innerWidth
-		  } else { return 0}
+		  } else { return null}
 	}
 	const [width, setWidth] = useState(firstWidth);
 	useEffect(() => {
 		const handleResize = () => {
 			setWidth(window.innerWidth);
 		};
+		handleResize();
 		window.addEventListener('resize', handleResize);
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}/* , [] */);
+	}, []);
 	return width;
-};
+}; */
 // UNFINISHED
 export const Accordion = contents => {
 	contents = contents.contents;
@@ -541,9 +539,9 @@ export const Accordion = contents => {
 };
 
 // REMOVE IN FINAL VERSION
-export const DisplayWidth = () => {
+/* export const DisplayWidth = () => {
 	return <div className="screen-width">{CurrentWidth()}</div>;
-};
+}; */
 
 // DEPRECIATED
 // eslint-disable-next-line

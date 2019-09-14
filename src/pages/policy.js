@@ -1,9 +1,9 @@
-import React from "react"
-import "../css/homepage.css"
-import "../css/bootstrap.css"
-import "../css/accordion.css"
-import { StandardHeader } from "../ProductsComponents"
-import { Accordion, Footer } from "../Components"
+import React from "react";
+import "../css/homepage.css";
+import "../css/bootstrap.css";
+import "../css/accordion.css";
+import { StandardHeader } from "../ProductsComponents";
+import { Accordion, Footer } from "../Components";
 
 class Policy extends React.Component {
   Description = () => {
@@ -132,7 +132,7 @@ class Policy extends React.Component {
           "(c) developing strategies to monitor and evaluate the educational effectiveness and long-term financial efficiency of OER, which include participation of all relevant stakeholders. Such strategies could focus on improving learning processes and strengthening the connections between findings, decision-making, transparency, and accountability to ensure the best educational outcomes. This would include support to the development of an evidence base on the impact of OER on education and learning.",
         ],
       },
-    ]
+    ];
     return (
       <div className="bg-white p-128 maxer mx-auto">
         <div className="mx-lg-1 px-4">
@@ -144,8 +144,8 @@ class Policy extends React.Component {
           <Accordion contents={accordion} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -166,8 +166,8 @@ class Policy extends React.Component {
         <this.Description />
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Policy
+export default Policy;

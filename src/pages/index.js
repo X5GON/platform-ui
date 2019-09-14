@@ -4,7 +4,7 @@ import '../css/homepage.css';
 import '../css/animate.css';
 import { Link } from "gatsby"
 import ScrollAnimation from 'react-animate-on-scroll';
-import { MoreProducts, Navbar, CurrentWidth, Footer } from '../Components';
+import { MoreProducts, Navbar, Footer } from '../Components';
 import SmoothScroll from 'smooth-scroll';
 
 class Homepage extends React.Component {
@@ -207,12 +207,10 @@ class Homepage extends React.Component {
 						{contents.map((content, index) => {
 							const style = 'col-12 col-md-6 my-auto text-lg-left';
 							return (
-								<div className="row pt-128 h-100" key={index}>
+								<div className={"row pt-128 h-100"+ (index%2 !== 0 ? ' flex-md-row-reverse flex-row' : null)} key={index}>
 									<div
 										className={
-											index % 2 !== 0 && CurrentWidth() >= this.breakpoints.md
-												? 'order-last ' + style
-												: style
+											style
 										}
 									>
 										<ScrollAnimation animateIn="fadeIn" animateOnce={true}>
@@ -340,146 +338,12 @@ class Homepage extends React.Component {
 								src={'/imgs/partners/' + image + '_logo copy.png'}
 								alt={image}
 								className="mx-auto d-block px-3"
-								height={CurrentWidth() > this.breakpoints.md ? '100%' : 'auto'}
-								width={CurrentWidth() > this.breakpoints.md ? 'auto' : '100%'}
+								height={'100%'}
+								width={'auto'}
 							></img>
 						</div>
 					))}
 				</div>
-			</div>
-		);
-	};
-	Join = () => {
-		const content = {
-			title: 'Join the Global Network Partnership',
-			text: [
-				'We aim to give a chance to unlock the digital potential of  OER, and to overcome OER discoverability, disparity and fragmentation and understand the world of OER in a more structured manner.',
-				'The project proposes connecting all existing OER sites into a Global Network.  To do so, we suggest a pact that empowers all involved OER sites and players.'
-			]
-		};
-		const style = 'col-12 col-sm-6 my-auto';
-		return (
-			<div className="maxer mx-auto">
-				<div className="row px-4 mx-1 px-md-5 mx-sm-3 h-100 join p-128">
-					<div
-						className={
-							CurrentWidth() >= this.breakpoints.sm
-								? 'order-last ' + style
-								: style
-						}
-					>
-						<img
-							src={'imgs/illustrations/join-forces.jpg'}
-							width="100%"
-							alt="ecosystem"
-						/>
-					</div>
-
-					<div className={style + ' width-limit mr-auto'}>
-						<h3 className="text-purple mb-lg-4">{content.title}</h3>
-						<div className="py-3">
-							{content.text.map((p, index) => {
-								return (
-									<p className="text-muted" key={index}>
-										{p}
-									</p>
-								);
-							})}
-						</div>
-
-						<Link className="buttonless-green bg-green mx-auto" to="join">
-							LEARN MORE >
-						</Link>
-					</div>
-				</div>
-			</div>
-		);
-	};
-	Drafts = () => {
-		const content = [
-			{
-				title: 'Mainstream OER across UNESCO Member States',
-				paragraphs: [
-					'Our technology is being produced by three UNESCO Chairs and supports OER in its endeavors for global mainstreaming.',
-					'Read the draft UNESCO Recommendation and exactly see where our technology allows you to be in line with this new international regulation.'
-				],
-				draft: ''
-			},
-			{
-				title: 'Embracing your autorship',
-				paragraphs: [
-					"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-					'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-				],
-				draft: ''
-			}
-		];
-		return (
-			<div className="drafts">
-				{content.map((object, index) => {
-					return (
-						<div className={index % 2 ? 'bg-white' : 'bg-black'} key={index}>
-							<div className="mx-auto">
-								<div className={'row no-gutters'}>
-									{CurrentWidth() < this.breakpoints.lg ? (
-										<div className={'col-lg-6 m-0 p-0'}>
-											{index !== 0 ? (
-												<div
-													className="background-kids"
-													style={{ height: '80vw', width: '100%' }}
-												></div>
-											) : null}
-										</div>
-									) : (
-										<div
-											className={
-												'col-lg-6 m-0 p-0' + (index % 2 ? ' order-last' : null)
-											}
-										>
-											{index !== 1 ? (
-												<div className="background-kids"></div>
-											) : null}
-										</div>
-									)}
-
-									<div
-										className={
-											'col-lg-6 m-0 p-0 ' +
-											(index % 2 ? 'bg-white' : 'bg-black')
-										}
-									>
-										<div
-											className={
-												'p-5 m-md-5 maxer-625 ' +
-												(index % 2 ? 'float-right' : null)
-											}
-										>
-											<h3 className={index % 2 ? 'text-purple' : 'text-white'}>
-												{object.title}
-											</h3>
-
-											{object.paragraphs.map((p, index1) => {
-												return (
-													<p
-														className={
-															'my-3' +
-															' ' +
-															(index % 2 ? 'text-black' : 'text-white')
-														}
-														key={index1}
-													>
-														{p}
-													</p>
-												);
-											})}
-											<div className="button-green">Download Draft</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					);
-				})}
 			</div>
 		);
 	};
@@ -503,7 +367,7 @@ class Homepage extends React.Component {
 		};
 		return (
 			<div className="unesco-join">
-				<div className="row justify-content-center no-gutters">
+				<div className="row justify-content-center no-gutters flex-column-reverse flex-lg-row">
 					<div className={style + 'my-auto'}>
 						<div
 							className={
@@ -528,8 +392,7 @@ class Homepage extends React.Component {
 					<div
 						className={
 							style +
-							'background-unesco pics-resp' +
-							(CurrentWidth() < this.breakpoints.lg ? ' order-first' : '')
+							'background-unesco pics-resp'
 						}
 					></div>
 				</div>
