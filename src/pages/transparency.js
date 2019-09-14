@@ -2,6 +2,7 @@ import React from "react";
 import "../css/bootstrap.css";
 import "../css/homepage.css";
 import "../css/animate.css";
+import "../css/accordion.css";
 import { StandardHeader } from "../ProductsComponents";
 import { Accordion, Footer } from "../Components";
 

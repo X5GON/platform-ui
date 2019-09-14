@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/homepage.css";
 import "../css/bootstrap.css";
+import "../css/accordion.css";
 import { Link } from "gatsby";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";

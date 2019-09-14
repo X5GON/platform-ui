@@ -2,9 +2,10 @@ import React from 'react';
 import '../css/bootstrap.css';
 import '../css/homepage.css';
 import '../css/animate.css';
-import { Link } from "gatsby"
+
 import ScrollAnimation from 'react-animate-on-scroll';
 import { MoreProducts, Navbar, Footer } from '../Components';
+import { Link } from "gatsby"
 import SmoothScroll from 'smooth-scroll';
 
 class Homepage extends React.Component {

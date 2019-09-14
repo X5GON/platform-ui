@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/bootstrap.css";
 import "../css/homepage.css";
-import "../css/team.css";
 import "../css/animate.css";
 import { Navbar, Footer } from "../Components";
 

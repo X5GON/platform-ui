@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/bootstrap.css';
 import '../../css/homepage.css';
 import '../../css/feed.css';
+import '../../css/accordion.css';
 import { MoreProducts,Footer } from '../../Components';
 import { Link } from "gatsby"
 import { StandardHeader, MakeParagraphs } from '../../ProductsComponents';
