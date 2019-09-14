@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "x5gon-homepage",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "We are building World's first ecosystem connecting Open Educational Resource sites for the collective benefit of everyone, everywhere.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gregor Zunic",
   "dependencies": {
+    "eslint-plugin-flowtype": "^4.3.0",
     "gatsby": "^2.15.15",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-manifest": "^2.2.16",
@@ -15,8 +16,12 @@
     "gatsby-transformer-sharp": "^2.2.14",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-countup": "^4.2.2",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "smooth-scroll": "^16.1.0",
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

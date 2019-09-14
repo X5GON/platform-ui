@@ -1,0 +1,95 @@
+.accordion .card {
+	border: none;
+	border-top: 1px solid #00ad57;
+	border-bottom: 1px solid #00ad57;
+	border-radius: 0 !important;
+}
+.accordion-single {
+	border-bottom: 1px solid #00ad57 !important;
+}
+.accordion .card.blue {
+	border-top: 1px solid #00134d;
+	border-bottom: none;
+}
+.accordion .card-header {
+	background: none;
+	border: none;
+	padding-left: 0;
+}
+.accordion .card-header div {
+	cursor: pointer;
+}
+.accordion .card-header button {
+	padding: 0;
+}
+.plus-minus {
+	height: 32px;
+	width: 32px;
+	margin-top: 10px;
+}
+.plus-minus.blue {
+	height: 16px;
+	width: 16px;
+	margin: 18px 8px 0 0;
+}
+
+.plus-minus.show {
+	display: inline;
+	background-image: url('../images/xl_plus_icon.svg');
+}
+.plus-minus.collapsing {
+	display: inline;
+	background-image: url('../images/xl_minus_icon.svg');
+}
+.plus-minus {
+	background-image: url('../images/xl_minus_icon.svg');
+}
+.plus-minus.collapsing {
+	display: inline !important;
+}
+
+/* BLUE */
+
+.plus-minus.show.blue {
+	display: inline;
+	background-image: url('../images/xl_plus_icon_blue.svg');
+}
+.plus-minus.collapsing.blue {
+	display: inline;
+	background-image: url('../images/xl_minus_icon_blue.svg');
+}
+.plus-minus.blue {
+	background-image: url('../images/xl_minus_icon_blue.svg');
+}
+
+/* BLUE */
+
+.plus-minus {
+	display: inline !important;
+}
+div.btn:hover {
+	cursor: pointer;
+}
+div.btn {
+	padding: 0;
+}
+.card-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+.card-header {
+	padding-right: 0;
+}
+.line-h-52 {
+	line-height: 52px !important;
+}
+@media (max-width: 768px) {
+	.plus-minus {
+		height: 32px;
+		width: 32px;
+		margin-top: 4px;
+	}
+	.line-h-52 {
+		line-height: 28px !important;
+	}
+}
