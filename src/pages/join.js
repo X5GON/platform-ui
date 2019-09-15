@@ -6,7 +6,10 @@ import { Link } from "gatsby";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";
 
-class Join extends React.Component {
+import { graphql, StaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+
+export default class Join extends React.Component {
   Form = () => {
     return (
       <div className="bg-green-transparent app-form">
@@ -244,19 +247,21 @@ class Join extends React.Component {
   render() {
     return (
       <div>
-        <StandardHeader
-          object={{
-            background: "bg-join-header",
-            subheader: "CONTRIBUTE",
-            product: "Join Forces",
-            description:
-              "We suggest a pact that empowers all involved OER sites and players.",
-            button: {
-              text: "Fill in the Form",
-              link: "#form",
-            },
-          }}
-        />
+        <BackgroundSection>
+          <StandardHeader
+            object={{
+              background: "bg-none",
+              subheader: "CONTRIBUTE",
+              product: "Join Forces",
+              description:
+                "We suggest a pact that empowers all involved OER sites and players.",
+              button: {
+                text: "Fill in the Form",
+                link: "#form",
+              },
+            }}
+          />
+        </BackgroundSection>
         <this.Description />
         <this.Form />
         <Footer />
@@ -265,4 +270,33 @@ class Join extends React.Component {
   }
 }
 
-export default Join;
+// DUPLICATED FOR GRAPHQL SECURITY REASONS!
+const BackgroundSection = props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        desktop: file(relativePath: { eq: "join_forces_header_image.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      // Set ImageData.
+      const imageData = data.desktop.childImageSharp.fluid;
+      return (
+        <BackgroundImage
+          Tag="section"
+          className={"className"}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+          {props.children}
+        </BackgroundImage>
+      );
+    }}
+  />
+);

@@ -6,6 +6,9 @@ import "../css/accordion.css";
 import { StandardHeader } from "../ProductsComponents";
 import { Accordion, Footer } from "../Components";
 
+import { graphql, StaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+
 export default class Transparency extends React.Component {
   Description = () => {
     const accordion = [
@@ -70,21 +73,54 @@ export default class Transparency extends React.Component {
   render() {
     return (
       <div>
-        <StandardHeader
-          object={{
-            background: "bg-transparency-header",
-            subheader: "HOW IT WORKS",
-            product: "Transparency",
-            description: "How we use ML and AI to process your OER sites",
-            button: {
-              text: "Github Link",
-              externalLink: "https://github.com/JozefStefanInstitute/x5gon",
-            },
-          }}
-        />
+        <BackgroundSection>
+          <StandardHeader
+            object={{
+              background: "bg-none",
+              subheader: "HOW IT WORKS",
+              product: "Transparency",
+              description: "How we use ML and AI to process your OER sites",
+              button: {
+                text: "Github Link",
+                externalLink: "https://github.com/JozefStefanInstitute/x5gon",
+              },
+            }}
+          />
+        </BackgroundSection>
         <this.Description />
         <Footer />
       </div>
     );
   }
 }
+
+// DUPLICATED FOR GRAPHQL SECURITY REASONS!
+const BackgroundSection = props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        desktop: file(relativePath: { eq: "transparency.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      // Set ImageData.
+      const imageData = data.desktop.childImageSharp.fluid;
+      return (
+        <BackgroundImage
+          Tag="section"
+          className={"className"}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+          {props.children}
+        </BackgroundImage>
+      );
+    }}
+  />
+);

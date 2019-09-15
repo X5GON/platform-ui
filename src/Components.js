@@ -500,12 +500,12 @@ export const Accordion = contents => {
 													>
 														<p className="mb-0 text-purple text-purple-bold line-h-52">
 															{object.title}
-															<div className="d-none d-md-inline">
+															<span className="d-none d-md-inline">
 																<span
 																	id={targetID}
 																	className="float-right collapse show plus-minus blue"
 																></span>
-															</div>
+															</span>
 														</p>
 													</div>
 												</div>

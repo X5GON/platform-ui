@@ -197,7 +197,7 @@ header .under {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-}
+} /* 
 .bg-join-header {
   background-image: url("../images/join_forces_header_image.png");
   background-repeat: no-repeat;
@@ -215,7 +215,9 @@ header .under {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-}
+} */
+
+/* 
 .h-stats {
   font-size: 48px;
   font-weight: 300;
@@ -227,7 +229,7 @@ header .under {
   line-height: 1.6;
   letter-spacing: 0.4px;
   color: rgba(255, 255, 255, 0.6);
-}
+} */
 
 .bottomed {
   bottom: 0;

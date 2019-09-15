@@ -1,9 +1,9 @@
-import React from "react"
-import { Navbar } from "./Components"
-import { Link } from "gatsby"
+import React from "react";
+import { Navbar } from "./Components";
+import { Link } from "gatsby";
 
 export const StandardHeader = object => {
-  object = object.object
+  object = object.object;
   const makeButton = object => {
     if (object.button) {
       if (object.button.link) {
@@ -11,24 +11,24 @@ export const StandardHeader = object => {
           <Link to={object.button.link}>
             <div className="button-green">{object.button.text}</div>
           </Link>
-        )
+        );
       } else if (object.button.externalLink) {
         return (
           <a href={object.button.externalLink} target="blank">
             <div className="button-green">{object.button.text}</div>
           </a>
-        )
+        );
       } else {
         return (
           <Link to="#">
             <div className="button-green">{object.button.text}</div>
           </Link>
-        )
+        );
       }
     } else {
-      return null
+      return null;
     }
-  }
+  };
   return (
     <div className={object.background ? object.background : "bg-sky"}>
       <Navbar />
@@ -57,21 +57,22 @@ export const StandardHeader = object => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 export const MakeParagraphs = contents => {
-  contents = contents.object
+  contents = contents.object;
   return (
     <div className="row">
       {contents.map((list, index) => {
         return (
           <div className="col-12 col-md-12 text-muted">
             {list.map(paragraph => {
-              return <p className="maxer-880 pr-3">{paragraph}</p>
+              return <p className="maxer-880 pr-3">{paragraph}</p>;
             })}
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};

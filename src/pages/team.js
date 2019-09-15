@@ -67,7 +67,7 @@ class Team extends React.Component {
                     <div className="px-sm-3 mx-auto text-left">
                       <img
                         className="mx-auto"
-                        src={"imgs/team/" + content.photo}
+                        src={"/imgs/team/" + content.photo}
                         width="100%"
                         alt={content.photo}
                       />
