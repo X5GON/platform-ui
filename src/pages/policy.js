@@ -2,6 +2,7 @@ import React from "react";
 import "../css/homepage.css";
 import "../css/bootstrap.css";
 import "../css/accordion.css";
+import "../css/animate.css";
 import { StandardHeader } from "../ProductsComponents";
 import { Accordion, Footer } from "../Components";
 
@@ -195,9 +196,9 @@ const BackgroundSection = props => (
       return (
         <BackgroundImage
           Tag="section"
-          className={"className"}
+          className={"animated fadeIn faster"}
           fluid={imageData}
-          backgroundColor={`white`}
+          backgroundColor={`none`}
         >
           {props.children}
         </BackgroundImage>

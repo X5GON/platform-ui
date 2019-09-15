@@ -114,9 +114,9 @@ const BackgroundSection = props => (
       return (
         <BackgroundImage
           Tag="section"
-          className={"className"}
+          className={"animated fadeIn faster"}
           fluid={imageData}
-          backgroundColor={`white`}
+          backgroundColor={`none`}
         >
           {props.children}
         </BackgroundImage>
