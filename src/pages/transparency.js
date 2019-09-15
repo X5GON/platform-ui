@@ -116,7 +116,7 @@ const BackgroundSection = props => (
           Tag="section"
           className={"className"}
           fluid={imageData}
-          backgroundColor={`#040e18`}
+          backgroundColor={`white`}
         >
           {props.children}
         </BackgroundImage>

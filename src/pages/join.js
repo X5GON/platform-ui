@@ -257,7 +257,7 @@ export default class Join extends React.Component {
                 "We suggest a pact that empowers all involved OER sites and players.",
               button: {
                 text: "Fill in the Form",
-                link: "#form",
+                link: "/products/join#form",
               },
             }}
           />
@@ -292,7 +292,7 @@ const BackgroundSection = props => (
           Tag="section"
           className={"className"}
           fluid={imageData}
-          backgroundColor={`#040e18`}
+          backgroundColor={`white`}
         >
           {props.children}
         </BackgroundImage>
