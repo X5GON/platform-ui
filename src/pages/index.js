@@ -4,7 +4,7 @@ import '../css/homepage.css';
 import '../css/animate.css';
 
 import ScrollAnimation from 'react-animate-on-scroll';
-import { MoreProducts, Navbar, Footer } from '../Components';
+import { MoreProducts, Navbar, Footer, DisplayWidth } from '../Components';
 import { Link } from "gatsby"
 import SmoothScroll from 'smooth-scroll';
 
@@ -403,7 +403,9 @@ class Homepage extends React.Component {
 						<div
 							className={'p-md-5 px-1 mx-4 py-5 m-md-5 maxer-625 text-white'}
 						>
+							<Link to="/policy">
 							<h4 className="pb-3 mb-3">{unesco.title}</h4>
+							</Link>
 							{join.paragraphs.map((p, index1) => {
 								return (
 									<p className={'my-3'} key={index1}>
@@ -426,6 +428,7 @@ class Homepage extends React.Component {
 	render() {
 		return (
 			<div className="wrapper">
+				<DisplayWidth></DisplayWidth>
 				<this.Header />
 				<div id="more" />
 				<this.Description />

@@ -165,7 +165,14 @@ class Feed extends React.Component {
                 <p className="information">
                   The library that enables connection between the OER repository
                   and the X5GON platform. The full documentation of the library
-                  is available <a href="/docs/x5gon-docs.pdf">HERE</a>.
+                  is available{" "}
+                  <a
+                    href="https://platform.x5gon.org/docs/x5gon-docs.pdf"
+                    target="blank"
+                  >
+                    HERE
+                  </a>
+                  .
                 </p>
                 <div className="doc url_baseline p-4 mb-3">
                   <p className="information">
@@ -4110,7 +4117,7 @@ class Feed extends React.Component {
             description: "Read the X5GON REST API documentation",
             button: {
               text: "Read API",
-              link: "#api",
+              link: "products/feed#api",
             },
           }}
         />

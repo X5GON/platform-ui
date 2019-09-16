@@ -5,7 +5,6 @@ import "../css/accordion.css";
 import { Link } from "gatsby";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";
-
 import { graphql, StaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 
@@ -257,7 +256,7 @@ export default class Join extends React.Component {
                 "We suggest a pact that empowers all involved OER sites and players.",
               button: {
                 text: "Fill in the Form",
-                link: "/products/join#form",
+                link: "/join#form",
               },
             }}
           />

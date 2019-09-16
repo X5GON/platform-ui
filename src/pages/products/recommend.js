@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/bootstrap.css";
 import "../../css/homepage.css";
 import { MoreProducts, Footer } from "../../Components";
+import { Link } from "gatsby";
 import { StandardHeader, MakeParagraphs } from "../../ProductsComponents";
 
 export default class Recommend extends React.Component {
@@ -28,6 +29,11 @@ export default class Recommend extends React.Component {
           </h4>
 
           <MakeParagraphs object={contents} />
+          <div className="pt-128">
+            <Link to="/products/feed#api" className="button-green px-4">
+              Check the API
+            </Link>
+          </div>
         </div>
       </div>
     );

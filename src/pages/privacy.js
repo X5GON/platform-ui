@@ -9,7 +9,7 @@ class Privacy extends React.Component {
   Privacy = () => {
     return (
       <div className="maxer mx-auto p-5 text-purple">
-        <h1>Privacy Policy</h1>
+        <h3>Privacy Policy</h3>
         <p className="information">
           The X5GON project is creating a solution that will help users/students
           find what they need not just in Open Educational Resources (OER)

@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Gregor Zunic",
   "dependencies": {
+    "classnames": "^2.2.6",
+    "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^4.3.0",
     "gatsby": "^2.15.15",
     "gatsby-background-image": "^0.8.11",

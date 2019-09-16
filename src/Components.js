@@ -1,4 +1,4 @@
-import React /* , { useState, useEffect } */ from 'react';
+import React , { useState, useEffect }  from 'react';
 import './css/bootstrap.css';
 import './css/components.css';
 import { Link } from 'gatsby';
@@ -164,10 +164,10 @@ export const Footer = () => {
 				page: 'Github Repository',
 				link: 'https://github.com/JozefStefanInstitute/x5gon'
 			},
-			{
+			/* {
 				page: 'Cookies Subpage',
 				link: 'Cookies Subpage'
-			},
+			}, */
 			{
 				page: 'Documentation',
 				link: 'https://platform.x5gon.org/docs/x5gon-docs.pdf'
@@ -309,7 +309,7 @@ export const MoreProducts = props => {
 		},
 		{
 			todo: 'Connect',
-			text: 'Make your users connected to all OER sites in Moodle',
+			text: 'Connect users with OER sites in Moodle',
 			link: 'connect',
 			image: 'connect.png'
 		},
@@ -358,7 +358,7 @@ export const MoreProducts = props => {
 							if (content.empty) {
 								return (
 									<div
-										className="col-12 col-sm-6 col-md-4 px-4 py-2 text-left"
+										className="col-12 col-sm-6 col-lg-4 px-4 py-2 text-left"
 										key={index}
 									>
 										<h4 className="pb-5">
@@ -369,7 +369,7 @@ export const MoreProducts = props => {
 							} else {
 								return (
 									<div
-										className="col-12 col-sm-6 col-md-4 px-4 py-2"
+										className="col-12 col-sm-6 col-lg-4 px-4 py-2"
 										key={index}
 									>
 										<div className="card bg-white px-5 pb-5 pt-3 px-sm-3 mx-auto">
@@ -389,7 +389,7 @@ export const MoreProducts = props => {
 												}}
 											></div> */}
 											<h5 className="text-purple-bold">{content.todo}</h5>
-											<p className="text-muted px-3 m-0 p-0 under mx-auto">
+											<p className="text-muted px-3 m-0 p-0 under mx-auto pb-5">
 												{content.text}
 											</p>
 											<div className="mt-3 mb-4">
@@ -422,25 +422,6 @@ export const MoreProducts = props => {
 	);
 };
 
-/* export const CurrentWidth = () => {
-	const firstWidth = () => {
-		if (typeof window !== `undefined`) {
-			return window.innerWidth
-		  } else { return null}
-	}
-	const [width, setWidth] = useState(firstWidth);
-	useEffect(() => {
-		const handleResize = () => {
-			setWidth(window.innerWidth);
-		};
-		handleResize();
-		window.addEventListener('resize', handleResize);
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
-	return width;
-}; */
 // UNFINISHED
 export const Accordion = contents => {
 	contents = contents.contents;
@@ -539,9 +520,28 @@ export const Accordion = contents => {
 };
 
 // REMOVE IN FINAL VERSION
-/* export const DisplayWidth = () => {
+export const CurrentWidth = () => {
+	const firstWidth = () => {
+		if (typeof window !== `undefined`) {
+			return window.innerWidth
+		  } else { return null}
+	}
+	const [width, setWidth] = useState(firstWidth);
+	useEffect(() => {
+		const handleResize = () => {
+			setWidth(window.innerWidth);
+		};
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+	return width;
+};
+export const DisplayWidth = () => {
 	return <div className="screen-width">{CurrentWidth()}</div>;
-}; */
+};
 
 // DEPRECIATED
 // eslint-disable-next-line
