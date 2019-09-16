@@ -55,9 +55,10 @@ export default class Connect extends React.Component {
 		const contents = [[]];
 		return (
 			<div className="bg-white p-128 maxer mx-auto connect">
-				<div className="mx-lg-1 px-4" id="api">
+				<div className="mx-lg-1 px-4">
 					<h4 className="maxer-880 pb-128 mb-0 text-purple">Use our easy to install Moodle plugin to enable the integration of different X5GON features within any Moodle LMS. Make easy and simple the control and the​ integration of X5GON 'User Activity Acquisition' library by managing the call and the activation of our services in the right Moodle courses pages. As a result, we will be notified about the exact accesses made on the OERs embedded in open courses.</h4>
 					<MakeParagraphs object={contents} />
+          <div className='anchor' id='api'/>
           <this.Accordion
 								props={{ targetID: 'apibase', title: 'X5GON API' }}
 							>
@@ -580,7 +581,7 @@ export default class Connect extends React.Component {
 					For information about what user data is acquired and how the snippet
 					works access the documentation available{' '}
 					<a
-						href="https://platform.x5gon.org/docs/x5gon-docs.pdf"
+						href="/files/x5gon-docs.pdf"
 						target="blank"
 					>
 						HERE
@@ -734,8 +735,8 @@ export default class Connect extends React.Component {
 						product: currentProduct,
 						description: 'Make your users connected to all OER sites in Moodle',
 						button: {
-							text: 'Try Now',
-							link: ''
+							text: 'Read API',
+							link: 'products/connect#api'
 						}
 					}}
 				/>

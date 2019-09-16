@@ -166,10 +166,7 @@ class Feed extends React.Component {
                   The library that enables connection between the OER repository
                   and the X5GON platform. The full documentation of the library
                   is available{" "}
-                  <a
-                    href="https://platform.x5gon.org/docs/x5gon-docs.pdf"
-                    target="blank"
-                  >
+                  <a href="/files/x5gon-docs.pdf" target="blank">
                     HERE
                   </a>
                   .

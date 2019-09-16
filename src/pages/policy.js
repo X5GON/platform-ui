@@ -162,7 +162,7 @@ export default class Policy extends React.Component {
                 "Read the Recommendation and align policy and technology",
               button: {
                 text: "Download draft",
-                link: "",
+                externalLink: "/files/oer_recommendations.pdf",
               },
             }}
           />

@@ -1,4 +1,4 @@
-import React , { useState, useEffect }  from 'react';
+import React /* , { useState, useEffect } */  from 'react';
 import './css/bootstrap.css';
 import './css/components.css';
 import { Link } from 'gatsby';
@@ -162,7 +162,7 @@ export const Footer = () => {
 		SUPPORT: [
 			{
 				page: 'Github Repository',
-				link: 'https://github.com/JozefStefanInstitute/x5gon'
+				externalLink: 'https://github.com/JozefStefanInstitute/x5gon'
 			},
 			/* {
 				page: 'Cookies Subpage',
@@ -170,7 +170,7 @@ export const Footer = () => {
 			}, */
 			{
 				page: 'Documentation',
-				link: 'https://platform.x5gon.org/docs/x5gon-docs.pdf'
+				externalLink: '/files/x5gon-docs.pdf'
 			},
 			{
 				page: 'Privacy & policy',
@@ -198,11 +198,11 @@ export const Footer = () => {
 					{name}
 				</p>
 				{contents[name].map((object, index) => {
-					if (object.link.includes('https://')) {
+					if (object.externalLink) {
 						return (
 							<a
 								style={{ textTransform: 'capitalize' }}
-								href={object.link}
+								href={object.externalLink}
 								key={index}
 								className={style}
 								target="blank"
@@ -520,6 +520,7 @@ export const Accordion = contents => {
 };
 
 // REMOVE IN FINAL VERSION
+/* 
 export const CurrentWidth = () => {
 	const firstWidth = () => {
 		if (typeof window !== `undefined`) {
@@ -541,7 +542,7 @@ export const CurrentWidth = () => {
 };
 export const DisplayWidth = () => {
 	return <div className="screen-width">{CurrentWidth()}</div>;
-};
+}; */
 
 // DEPRECIATED
 // eslint-disable-next-line

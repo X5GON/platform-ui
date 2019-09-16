@@ -10,6 +10,7 @@ export default class Discovery extends React.Component {
     const contents = [
       [
         "The materials shown currently are text, video and audio. They are enriched them through a process called Wikification and stored into a database that contains data about user activities on the OER repositories that integrated the Connect Service, a library developed for acquiring behavior data. ",
+        "The platform consists of four major components – the database, ingesting and processing pipeline, services and platform API – each employed to perform a separate task. The platform is able to process three types of OER materials: text, video and audio. In addition, it enriches them through a process called Wikification. The processed materials are stored into the database. The database also contains data about user activities on the OER repositories that integrated the X5GON Connect Service, a library developed for acquiring behaviour data. The database is accessed by the different services developed within the project – the recommender engine, the quality assurance tool and the learning analytics tool – which can be accessed through the platform API.",
       ],
     ];
     return (

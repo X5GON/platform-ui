@@ -4,7 +4,7 @@ import '../css/homepage.css';
 import '../css/animate.css';
 
 import ScrollAnimation from 'react-animate-on-scroll';
-import { MoreProducts, Navbar, Footer, DisplayWidth } from '../Components';
+import { MoreProducts, Navbar, Footer } from '../Components';
 import { Link } from "gatsby"
 import SmoothScroll from 'smooth-scroll';
 
@@ -416,9 +416,11 @@ class Homepage extends React.Component {
 							<Link to="/policy">
 								<div className="buttonless-green mb-4 mt-5">LEARN MORE</div>
 							</Link>
+							<a href="/files/oer_recommendations.pdf" target='blank'>
 							<div className="button-green mt-5 mb-md-0 mb-3">
 								Download Draft
 							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -428,7 +430,6 @@ class Homepage extends React.Component {
 	render() {
 		return (
 			<div className="wrapper">
-				<DisplayWidth></DisplayWidth>
 				<this.Header />
 				<div id="more" />
 				<this.Description />
