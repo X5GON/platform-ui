@@ -49,7 +49,7 @@ class Homepage extends React.Component {
 									<b className="d-block">Connected.</b>
 								</h1>
 								<p className="mt-3 pt-3 text-white w-100 body-2 pb-2 pb-lg-5 pr-4 pr-md-3">
-									We are building World's first ecosystem connecting Open
+									We are building the World's first ecosystem connecting Open
 									Educational Resource sites for the collective benefit of
 									everyone, everywhere.
 								</p>

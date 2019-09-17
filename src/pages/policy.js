@@ -159,7 +159,7 @@ export default class Policy extends React.Component {
               subheader: "CONTRIBUTE",
               product: "Policy",
               description:
-                "Read the Recommendation and align policy and technology",
+                "Read the UNESCO Recommendation and align policy and technology",
               button: {
                 text: "Download draft",
                 externalLink: "/files/oer_recommendations.pdf",
