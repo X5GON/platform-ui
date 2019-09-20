@@ -466,6 +466,11 @@ header .under {
 .connect a {
   color: #00ad57;
 }
+.partners-imgs {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border-radius: 50%;
+}
 
 @media (max-width: 1700px) {
   .main-img {
@@ -575,6 +580,16 @@ header .under {
     background-size: contain;
     background-position: center top;
     height: 100vw;
+  }
+}
+@media (max-width: 500px) {
+  .products .card .under {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .products .card .under {
+    height: auto;
+    padding-bottom: 0.3rem !important;
   }
 }
 @media (min-width: 768px) {
