@@ -38,6 +38,12 @@ export default function HTML(props) {
           crossOrigin="anonymous"
         ></script>
 
+        <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script>
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
