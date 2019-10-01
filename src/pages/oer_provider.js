@@ -16,7 +16,7 @@ export default class OERProvider extends React.Component {
     // spread operator
     const params = props.location.search.substr(1);
 
-    fetch(`http://localhost:8081/api/v1/oer_provider?${params}`)
+    fetch(`https://platform.x5gon.org/api/v1/oer_provider?${params}`)
       .then(res => res.json())
       .then(json => {
         if (json.error) {
