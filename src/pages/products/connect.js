@@ -4,7 +4,7 @@ import '../../css/homepage.css';
 import '../../css/feed.css';
 import '../../css/accordion.css';
 import { MoreProducts,Footer } from '../../Components';
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import { StandardHeader, MakeParagraphs } from '../../ProductsComponents';
 
 export default class Connect extends React.Component {
@@ -58,9 +58,17 @@ export default class Connect extends React.Component {
 				<div className="mx-lg-1 px-4">
 					<h4 className="maxer-880 pb-128 mb-0 text-purple">Use our easy to install Moodle plugin to enable the integration of different X5GON features within any Moodle LMS. Make easy and simple the control and the​ integration of X5GON 'User Activity Acquisition' library by managing the call and the activation of our services in the right Moodle courses pages. As a result, we will be notified about the exact accesses made on the OERs embedded in open courses.</h4>
 					<MakeParagraphs object={contents} />
+
+
+
           <div className='anchor' id='api'/>
           <this.Accordion
-								props={{ targetID: 'apibase', title: 'X5GON API' }}
+								props={{ targetID: 'apitoken', title: 'The X5GON Token' }}
+							>
+					  <this.TokenBASEapi />
+          </this.Accordion>
+          <this.Accordion
+								props={{ targetID: 'apibase', title: 'X5GON Connect API' }}
 							>
 					  <this.ConnectBASEapi />
           </this.Accordion>
@@ -72,26 +80,34 @@ export default class Connect extends React.Component {
 				</div>
 			</div>
 		);
-	};
+  };
+
+  TokenBASEapi = () => {
+    return (
+      <div className="text-purple maxer-880 api tokenapi">
+        <div id="oer-provider-token" class="resource">
+          <p class="form-text">
+            Each provider in the OER network receives its own <b>X5GON Token</b>.
+            This token is used to distinguish the location of the materials a
+            particular user has accessed.
+
+            The token is provided after a provider has successfully registered
+            to the OER Network.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
 	ConnectBASEapi = () => {
 		return (
 			<div className="text-purple maxer-880 api baseapi">
-				<div id="oer-provider-token" class="resource">
-					<h4>Your X5GON Token</h4>
-					<p class="form-text">
-						This is the X5GON Token generated for the your OER repository. Copy
-						this token somewhere safe as it is your identification token in the
-						X5GON OER Network.
-					</p>
-					{this.codeBlock('vjr4n2')}
-				</div>
-				<div id="oer-provider-library" class="resource mt-5">
-					<h4>The X5GON Connect</h4>
+				<div id="oer-provider-library" class="resource">
 					<p class="form-text">
 						The X5GON Connect library contains functions for providing
 						information about the user activity. What kind of user information
 						the functions provide is listed in the{' '}
-						<Link to="/privacy_policy" target="_blank">
+						<Link to="/privacy" target="_blank">
 							privacy policy
 						</Link>
 						, section "About the Data We Collect".
@@ -141,10 +157,11 @@ export default class Connect extends React.Component {
 						maintainer needs to set up when to send the user activity
 						information. The function that needs to be activated is:
 					</p>
-					<pre class="mb-3 language-javascript code-block"><span class="token function">x5gonActivityTracker</span><span class="token punctuation">(</span><span class="token string">'vjr4n2'</span><span class="token punctuation">,</span> testingEnvironment<span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+					<pre class="mb-3 language-javascript code-block"><span class="token function">x5gonActivityTracker</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">,</span> testingEnvironment<span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
 
 					<p>
-						where the <code>testingEnvironment</code> is a boolean value
+						where the <code>'token'</code> is the X5GON token of the provider
+            and <code>testingEnvironment</code> is a boolean value
 						indicating if the function is used for testing. Once in production,
 						this variable can be omited.
 					</p>
@@ -379,7 +396,7 @@ export default class Connect extends React.Component {
       <span className="token string">"href"</span>
       <span className="token punctuation">:</span>{" "}
       <span className="token string">
-        "https://platform.x5gon.org/privacy_policy"
+        "https://platform.x5gon.org/privacy"
       </span>
       {"\n"}
       {"      "}
@@ -439,7 +456,7 @@ export default class Connect extends React.Component {
       {"            "}
       <span className="token function">x5gonActivityTracker</span>
       <span className="token punctuation">(</span>
-      <span className="token string">'vjr4n2'</span>
+      <span className="token string">'token'</span>
       <span className="token punctuation">)</span>
       <span className="token punctuation">;</span>
       {"\n"}
@@ -481,7 +498,7 @@ export default class Connect extends React.Component {
       {"        "}
       <span className="token keyword">if</span>{" "}
       <span className="token punctuation">(</span>type{" "}
-      <span className="token operator">==</span>{" "}
+      <span className="token operator">===</span>{" "}
       <span className="token string">'opt-in'</span>{" "}
       <span className="token operator">&amp;&amp;</span> didConsent
       <span className="token punctuation">)</span>{" "}
@@ -507,7 +524,7 @@ export default class Connect extends React.Component {
       {"            "}
       <span className="token function">x5gonActivityTracker</span>
       <span className="token punctuation">(</span>
-      <span className="token string">'vjr4n2'</span>
+      <span className="token string">'token'</span>
       <span className="token punctuation">)</span>
       <span className="token punctuation">;</span>
       {"\n"}
@@ -538,7 +555,7 @@ export default class Connect extends React.Component {
       {"        "}
       <span className="token keyword">if</span>{" "}
       <span className="token punctuation">(</span>type{" "}
-      <span className="token operator">==</span>{" "}
+      <span className="token operator">===</span>{" "}
       <span className="token string">'opt-in'</span>
       <span className="token punctuation">)</span>{" "}
       <span className="token punctuation">{"{"}</span>
@@ -595,7 +612,7 @@ export default class Connect extends React.Component {
 		return (
 			<div className="text-purple maxer-880">
 				<p>
-					It is easy to install <em>X5-GON Moodle plugin</em>. Briefly, the
+					It is easy to install <em>X5GON Moodle plugin</em>. Briefly, the
 					plugin will be functional once the next steps have been followed:
 				</p>
 				<ol>
@@ -625,7 +642,7 @@ export default class Connect extends React.Component {
 					</li>
 					<li>
 						Create an external serviceunder “Plugins / Web services / External
-						Services”associated to X5-GON plugin newly installed,{' '}
+						Services”associated to X5GON plugin newly installed,{' '}
 						<strong>
 							<u>if it is not automatically created</u>
 						</strong>
@@ -633,7 +650,7 @@ export default class Connect extends React.Component {
 					</li>
 					<li>
 						Generate a Tokenassociated to the external service(newly created
-						related to X5-GON plugin) and the user(newly created). Here, you can
+						related to X5GON plugin) and the user(newly created). Here, you can
 						precise a number of restrictions on how to use the webservice: IP,
 						validity durations, users…
 					</li>
@@ -644,7 +661,7 @@ export default class Connect extends React.Component {
 				</p>
 				<ol>
 					<li>
-						Communicate the generated Tokento X5-GON server admin with a secure
+						Communicate the generated Tokento X5GON server admin with a secure
 						way.
 					</li>
 					<li>Configure Provider Tokenfield in plugin settings page.</li>
@@ -661,7 +678,7 @@ export default class Connect extends React.Component {
 					better characterize OERs within his LMS.
 				</p>
 				<img src="/imgs/products/moodleAPI.png" alt="moodleAPI" width="100%" />
-				<p className="text-figure">Fig. 5: X5-GON plugin settings page</p>
+				<p className="text-figure">Fig. 5: X5GON plugin settings page</p>
 				<p>
 					<strong>Enabled: </strong>Activate/Deactivate the plugin.
 				</p>
