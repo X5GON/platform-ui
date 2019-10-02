@@ -5,30 +5,34 @@ import "../css/accordion.css";
 import { Link } from "gatsby";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";
-import Recaptcha from 'react-recaptcha';
+import Recaptcha from "react-recaptcha";
 import { graphql, StaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 
-
 export default class Join extends React.Component {
-
   constructor(props) {
-		super(props);
+    super(props);
     // spread operator
     const params = props.location.search.substr(1);
     // get the state from the parameters
-    const state = params.split(',').map(pair => {
-      const [attribute, value] = pair.split('=');
-      return { [attribute]: value };
-    }).reduce((prev, curr) => ({ ...curr, ...prev }), {});
+    const state = params
+      .split(",")
+      .map(pair => {
+        const [attribute, value] = pair.split("=");
+        return { [attribute]: value };
+      })
+      .reduce((prev, curr) => ({ ...curr, ...prev }), {});
     // setup the state from the query parameters
-		this.state = {
+    this.state = {
       ...state,
-      callback: () => { console.log('Done!!!'); },
-      verifyCallback: (response) => { console.log(response); }
+      callback: () => {
+        console.log("Done!!!");
+      },
+      verifyCallback: response => {
+        console.log(response);
+      },
     };
-	}
-
+  }
 
   Form = props => {
     const object = props.object;
@@ -43,10 +47,7 @@ export default class Join extends React.Component {
               identify the resources you provide and include them into our
               recommendations making it visible within the OER network.
             </p>
-            <form
-              action="https://platform.x5gon.org/api/v1/oer_provider"
-              method="POST"
-            >
+            <form action="/oer_provider" method="POST">
               <div className="py-3 my-4 btb-green">
                 <div className="maxer-500">
                   <p className="p2">Repository Information</p>
@@ -127,12 +128,12 @@ export default class Join extends React.Component {
                 onloadCallback={object.callback}
               />
 
-              {object.invalid ?
+              {object.invalid ? (
                 <small className="text-red">
-                  You need to activate reCAPTCHA to validate you are not a robot!
-                </small> :
-                null
-              }
+                  You need to activate reCAPTCHA to validate you are not a
+                  robot!
+                </small>
+              ) : null}
 
               <div className="text-muted">
                 <small>
