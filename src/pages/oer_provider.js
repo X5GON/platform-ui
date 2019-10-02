@@ -55,14 +55,21 @@ export default class OERProvider extends React.Component {
     if (event) {
       event.preventDefault();
     }
+    console.log(this.state);
     this.setState({ loading: true });
     // get the provider information
-    fetch(`/api/v1/oer_provider?providerId=${this.state.repositoryToken}`)
+    fetch(
+      `https://platform.x5gon.org/api/v1/oer_provider?providerId=${this.state.repositoryToken}`
+    )
       .then(res => res.json())
       .then(json => {
         if (json.error) {
+          console.log(json);
+
           this.setState({ repository: null, error: json.error });
         } else {
+          console.log(json);
+
           this.setState({ repository: json, error: null });
         }
         this.setState({ loading: false });

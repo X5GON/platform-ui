@@ -25,12 +25,8 @@ export default class Join extends React.Component {
     // setup the state from the query parameters
     this.state = {
       ...state,
-      callback: () => {
-        console.log("Done!!!");
-      },
-      verifyCallback: response => {
-        console.log(response);
-      },
+      callback: () => {},
+      verifyCallback: response => {},
     };
   }
 
@@ -47,7 +43,10 @@ export default class Join extends React.Component {
               identify the resources you provide and include them into our
               recommendations making it visible within the OER network.
             </p>
-            <form action="/oer_provider" method="POST">
+            <form
+              action="https://platform.x5gon.org/oer_provider"
+              method="POST"
+            >
               <div className="py-3 my-4 btb-green">
                 <div className="maxer-500">
                   <p className="p2">Repository Information</p>
@@ -132,6 +131,11 @@ export default class Join extends React.Component {
                 <small className="text-red">
                   You need to activate reCAPTCHA to validate you are not a
                   robot!
+                </small>
+              ) : object.unsuccessful ? (
+                <small className="text-red">
+                  The repository submitted is already in the database. Please
+                  contact the project administrator for more information.
                 </small>
               ) : null}
 
