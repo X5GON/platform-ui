@@ -128,7 +128,7 @@ export default class Join extends React.Component {
               />
 
               {object.invalid ?
-                <small className="text-muted">
+                <small className="text-red">
                   You need to activate reCAPTCHA to validate you are not a robot!
                 </small> :
                 null
@@ -137,7 +137,7 @@ export default class Join extends React.Component {
               <div className="text-muted">
                 <small>
                   Already a member of the OER Network?{" "}
-                  <Link to="/oer_provider/login" className="text-green">
+                  <Link to="/oer_provider" className="text-green">
                     Login
                   </Link>
                 </small>

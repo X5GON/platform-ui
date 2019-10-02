@@ -253,6 +253,9 @@ header .under {
 .text-green {
   color: #00ad57;
 }
+.text-red {
+  color: red;
+}
 .bg-black {
   background-color: #141414;
 }
