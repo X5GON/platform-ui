@@ -460,7 +460,8 @@ header .under {
 }
 .app-form input[type="text"],
 .app-form input[type="url"],
-.app-form input[type="email"] {
+.app-form input[type="email"],
+.app-form input[type="password"] {
   background: transparent;
   border-color: #00134d9a;
 }
