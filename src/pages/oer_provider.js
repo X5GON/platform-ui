@@ -17,7 +17,7 @@ export default class OERProvider extends React.Component {
     const params = props.location.search.substr(1);
     // get the state from the parameters
     const state = params
-      .split(",")
+      .split("&")
       .map(pair => {
         const [attribute, value] = pair.split("=");
         return { [attribute]: value };
@@ -55,11 +55,10 @@ export default class OERProvider extends React.Component {
     if (event) {
       event.preventDefault();
     }
-    console.log(this.state);
     this.setState({ loading: true });
     // get the provider information
     fetch(
-      `https://platform.x5gon.org/api/v1/oer_provider?providerId=${this.state.repositoryToken}`
+      `/api/v1/oer_provider?providerId=${this.state.repositoryToken}`
     )
       .then(res => res.json())
       .then(json => {
@@ -249,13 +248,13 @@ export default class OERProvider extends React.Component {
 
           <p>
             Domain:{" "}
-            <a href="{repository.domain}" className="text-green">
+            <a href={repository.domain} className="text-green">
               {repository.domain}
             </a>
           </p>
           <p className="pb-128 mb-0">
             Contact:{" "}
-            <a href="mailto:{repository.contact}" className="text-green">
+            <a href={`mailto:${repository.contact}`} className="text-green">
               {repository.contact}
             </a>
           </p>

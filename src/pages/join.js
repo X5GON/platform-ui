@@ -44,7 +44,7 @@ export default class Join extends React.Component {
               recommendations making it visible within the OER network.
             </p>
             <form
-              action="https://platform.x5gon.org/oer_provider"
+              action="/api/v1/oer_provider"
               method="POST"
             >
               <div className="py-3 my-4 btb-green">
