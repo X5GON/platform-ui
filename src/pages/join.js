@@ -5,11 +5,33 @@ import "../css/accordion.css";
 import { Link } from "gatsby";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";
+import Recaptcha from "react-recaptcha";
 import { graphql, StaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 
 export default class Join extends React.Component {
-  Form = () => {
+  constructor(props) {
+    super(props);
+    // spread operator
+    const params = props.location.search.substr(1);
+    // get the state from the parameters
+    const state = params
+      .split(",")
+      .map(pair => {
+        const [attribute, value] = pair.split("=");
+        return { [attribute]: value };
+      })
+      .reduce((prev, curr) => ({ ...curr, ...prev }), {});
+    // setup the state from the query parameters
+    this.state = {
+      ...state,
+      callback: () => {},
+      verifyCallback: response => {},
+    };
+  }
+
+  Form = props => {
+    const object = props.object;
     return (
       <div className="bg-green-transparent app-form">
         <div className="maxer mx-auto">
@@ -23,7 +45,7 @@ export default class Join extends React.Component {
             </p>
             <form
               action="/oer_provider"
-              method="post"
+              method="POST"
             >
               <div className="py-3 my-4 btb-green">
                 <div className="maxer-500">
@@ -42,8 +64,8 @@ export default class Join extends React.Component {
                       id="oer-repository-name"
                       name="name"
                       aria-describedby="oer-repository-name-help"
-                      placeholder=""
-                      required=""
+                      placeholder="Enter repository name"
+                      required
                     />
                     <small
                       id="oer-repository-name-help"
@@ -66,8 +88,8 @@ export default class Join extends React.Component {
                       id="oer-repository-domain"
                       name="domain"
                       aria-describedby="oer-repository-domain-help"
-                      placeholder=""
-                      required=""
+                      placeholder="Enter repository domain"
+                      required
                     />
                     <small
                       id="oer-repository-domain-help"
@@ -80,7 +102,7 @@ export default class Join extends React.Component {
                 </div>
               </div>
               <p className="p2">Maintainer Information</p>
-              <div className="form-group py-4 maxer-500">
+              <div className="form-group py-1 maxer-500">
                 <label htmlFor="contact-email" className="ml-1 text-muted">
                   Maintainer Contact
                 </label>
@@ -90,48 +112,37 @@ export default class Join extends React.Component {
                   id="contact-email"
                   name="contact"
                   aria-describedby="contact-email-help"
-                  placeholder=""
-                  required=""
+                  placeholder="Enter email"
+                  required
                 />
                 <small id="contact-email-help" className="form-text text-muted">
                   Person responsible for snippet integration at your institution
                 </small>
               </div>
 
-              <div
-                id="g-recaptcha"
-                aria-describedby="recaptcha-help"
-                data-sitekey="6LeC3FoUAAAAAGcI3ZGRR93q6CzMwXPMxcIbycyE"
-              >
-                <div /* style="width: 304px; height: 78px;" */>
-                  <div>
-                    <iframe
-                      title="captcha"
-                      src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeC3FoUAAAAAGcI3ZGRR93q6CzMwXPMxcIbycyE&amp;co=aHR0cHM6Ly9wbGF0Zm9ybS54NWdvbi5vcmc6NDQz&amp;hl=en&amp;v=v1566858990656&amp;size=normal&amp;cb=s6y1pzajobp"
-                      width="304"
-                      height="78"
-                      role="presentation"
-                      name="a-nco9cqpmfspc"
-                      frameBorder="0"
-                      scrolling="no"
-                      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                    ></iframe>
-                  </div>
-                  <textarea
-                    id="g-recaptcha-response"
-                    name="g-recaptcha-response"
-                    className="g-recaptcha-response d-none"
-                  ></textarea>
-                </div>
-              </div>
-              <small className="text-muted">
-                You need to activate reCAPTCHA to validate you are not a robot!
-              </small>
+              <Recaptcha
+                sitekey="6LeC3FoUAAAAAGcI3ZGRR93q6CzMwXPMxcIbycyE"
+                render="explicit"
+                verifyCallback={object.verifyCallback}
+                onloadCallback={object.callback}
+              />
+
+              {object.invalid ? (
+                <small className="text-red">
+                  You need to activate reCAPTCHA to validate you are not a
+                  robot!
+                </small>
+              ) : object.unsuccessful ? (
+                <small className="text-red">
+                  The repository submitted is already in the database. Please
+                  contact the project administrator for more information.
+                </small>
+              ) : null}
 
               <div className="text-muted">
                 <small>
                   Already a member of the OER Network?{" "}
-                  <Link to="/oer_provider/login" className="text-green">
+                  <Link to="/oer_provider" className="text-green">
                     Login
                   </Link>
                 </small>
@@ -262,7 +273,7 @@ export default class Join extends React.Component {
           />
         </BackgroundSection>
         <this.Description />
-        <this.Form />
+        <this.Form object={this.state} />
         <Footer />
       </div>
     );
