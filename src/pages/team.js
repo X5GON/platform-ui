@@ -57,7 +57,7 @@ class Team extends React.Component {
                 PEOPLE BEHIND
               </h4>
               <p className="description mb-md-5 text-white">
-                Ut quis posuere mauris. Donec scelerisque auctor pulvinar.
+                Meet the people behind the scenes
               </p>
             </div>
             <div className="row p-2 pt-3">

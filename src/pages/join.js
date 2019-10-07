@@ -43,10 +43,7 @@ export default class Join extends React.Component {
               identify the resources you provide and include them into our
               recommendations making it visible within the OER network.
             </p>
-            <form
-              action="/api/v1/oer_provider"
-              method="POST"
-            >
+            <form action="/api/v1/oer_provider" method="POST">
               <div className="py-3 my-4 btb-green">
                 <div className="maxer-500">
                   <p className="p2">Repository Information</p>

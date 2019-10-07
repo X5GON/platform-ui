@@ -2,7 +2,7 @@ import React /* , { useState, useEffect } */ from "react";
 import "./css/bootstrap.css";
 import "./css/components.css";
 import { Link } from "gatsby";
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 import SmoothScroll from "smooth-scroll";
 
 // ACTIVE
@@ -53,7 +53,7 @@ export const Navbar = props => {
       }
     >
       <div className="navbar-brand">
-        <Link to="" className="nav-link">
+        <Link to="/" className="nav-link">
           <img
             src={
               "/imgs/logo/x5gon_logo_" +
@@ -541,7 +541,7 @@ export const DisplayWidth = () => {
 
 // DEPRECIATED
 // eslint-disable-next-line
-const Stats = () => {
+/* const Stats = () => {
   let stats_list = [
     { Sites: { nr: 40, mul: "" } },
     { Users: { nr: 1.8, mul: "M" } },
@@ -568,3 +568,4 @@ const Stats = () => {
     </div>
   );
 };
+ */

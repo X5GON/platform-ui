@@ -31,6 +31,7 @@ export default class OERProvider extends React.Component {
       loading: true,
     };
 
+    // TODO - maybe convert to arrow funcs? - have to check with backend
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -57,9 +58,7 @@ export default class OERProvider extends React.Component {
     }
     this.setState({ loading: true });
     // get the provider information
-    fetch(
-      `/api/v1/oer_provider?providerId=${this.state.repositoryToken}`
-    )
+    fetch(`/api/v1/oer_provider?providerId=${this.state.repositoryToken}`)
       .then(res => res.json())
       .then(json => {
         if (json.error) {
@@ -116,7 +115,10 @@ export default class OERProvider extends React.Component {
     return (
       <div className="bg-white p-128 maxer mx-auto repository">
         <div className="mx-lg-1 px-4">
-          <h4 className="maxer-880 text-purple">Loading ...</h4>
+          <h4 className="maxer-880 text-purple">
+            Loading{" "}
+            <img src="imgs/svgs/loading.svg" alt="loading" height="65px" />
+          </h4>
         </div>
       </div>
     );
