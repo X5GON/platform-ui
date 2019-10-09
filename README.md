@@ -1,15 +1,14 @@
 
 <p align="center">
   <a href="https://platform.x5gon.org">
-    <img alt="Gatsby" src="https://platform.x5gon.org/imgs/logo/x5gon_logo_light.svg" width="60" />
+    <img alt="Gatsby" src="https://platform.x5gon.org/imgs/logo/x5gon_logo_light.svg" width="200" />
   </a>
 </p>
-<h1 align="center">
-  X5GON frontend app
-</h1>
+<p>Entire X5GON project is available <a href="https://github.com/JozefStefanInstitute/x5gon">HERE</a></p>
+<p>The development started as a <a href="https://github.com/gregpr07/X5GON_react">React project</a> but was later moved to Gatsby.</p>
 
 
-## How to run the app
+## How to run the frontend
 
 1.  **Clone the repo**
 
@@ -37,3 +36,4 @@
     
     
 Learn more at <a href="https://www.gatsbyjs.org">https://www.gatsbyjs.org</a>
+
