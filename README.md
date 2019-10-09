@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://platform.x5gon.org">
-    <img alt="Gatsby" src="https://platform.x5gon.org/imgs/logo/x5gon_logo_dark.svg" width="60" />
+    <img alt="Gatsby" src="https://platform.x5gon.org/imgs/logo/x5gon_logo_light.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
