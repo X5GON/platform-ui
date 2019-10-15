@@ -117,7 +117,7 @@ export default class OERProvider extends React.Component {
         <div className="mx-lg-1 px-4">
           <h4 className="maxer-880 text-purple">
             Loading{" "}
-            <img src="imgs/svgs/loading.svg" alt="loading" height="65px" />
+            <img src="/imgs/svgs/loading.svg" alt="loading" height="65px" />
           </h4>
         </div>
       </div>
