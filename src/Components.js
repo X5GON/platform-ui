@@ -294,6 +294,7 @@ export const MoreProducts = props => {
       todo: "Discovery",
       text: "Search and find materials from all over the world",
       link: "discovery",
+      tryLink: "https://platform.x5gon.org/search",
       image: "discovery.png",
     },
     {
@@ -362,6 +363,7 @@ export const MoreProducts = props => {
                   </div>
                 );
               } else {
+                let greenButton = "button-green mx-auto mt-auto";
                 return (
                   <div
                     className="col-12 col-sm-6 col-lg-4 px-4 py-2"
@@ -374,15 +376,6 @@ export const MoreProducts = props => {
                         width="75%"
                         alt="ecosystem"
                       />
-                      {/* <div
-												className="mx-auto mb-5"
-												style={{
-													borderRadius: '50%',
-													backgroundColor: '#4877ff',
-													height: '150px',
-													width: '150px'
-												}}
-											></div> */}
                       <h5 className="text-purple-bold">{content.todo}</h5>
                       <p className="text-muted px-3 m-0 p-0 under mx-auto pb-5">
                         {content.text}
@@ -393,16 +386,16 @@ export const MoreProducts = props => {
                         </Link>
                       </div>
                       <div className="pb-3">
-                        {content.link ? (
+                        {content.tryLink ? (
+                          <div className={greenButton}>
+                            <a href={content.tryLink}>Try Now</a>
+                          </div>
+                        ) : content.link ? (
                           <Link to={"/products/" + content.link}>
-                            <div className="button-green mx-auto mt-auto">
-                              Try Now
-                            </div>
+                            <div className={greenButton}>Try Now</div>
                           </Link>
                         ) : (
-                          <div className="button-green mx-auto mt-auto">
-                            Try Now
-                          </div>
+                          <div className={greenButton}>Try Now</div>
                         )}
                       </div>
                     </div>
