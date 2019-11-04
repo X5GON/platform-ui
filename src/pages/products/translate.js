@@ -1101,7 +1101,7 @@ export default class Translate extends React.Component {
             description: "Translate all of your content",
             button: {
               text: "Try Now",
-              link: "",
+              externalLink: "https://ttp.mllp.upv.es/realtime-mt.html",
             },
           }}
         />

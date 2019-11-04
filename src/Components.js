@@ -301,6 +301,7 @@ export const MoreProducts = props => {
       todo: "Translate",
       text: "Translate your content in every format",
       link: "translate",
+      tryLink: "https://ttp.mllp.upv.es/realtime-mt.html",
       image: "translate.png",
     },
     {
