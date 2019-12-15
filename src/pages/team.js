@@ -63,7 +63,7 @@ class Team extends React.Component {
             <div className="row p-2 pt-3">
               {contents.map((content, index) => {
                 return (
-                  <div className="col-6 col-lg-3 col-md-4" key={index}>
+                  <div className="col-6 col-lg-3 col-md-4 pb-3" key={index}>
                     <div className="px-sm-3 mx-auto text-left">
                       <img
                         className="mx-auto partners-imgs"
