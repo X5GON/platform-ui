@@ -186,7 +186,7 @@ header .under {
   background-size: contain;
   background-position: left top;
   height: calc(100vh - 72px);
-  width: 49vw;
+  width: 50vw;
   margin-bottom: 0px;
 }
 .pics-resp {
