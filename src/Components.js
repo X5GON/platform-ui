@@ -294,7 +294,7 @@ export const MoreProducts = props => {
       todo: "Discovery",
       text: "Search and find materials from all over the world",
       link: "discovery",
-      tryLink: "https://platform.x5gon.org/search",
+      tryLink: "https://discovery.x5gon.org",
       image: "discovery.png",
     },
     {

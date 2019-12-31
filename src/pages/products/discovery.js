@@ -958,7 +958,7 @@ export default class Discovery extends React.Component {
             description: "Search and find materials from all over the world",
             button: {
               text: "Try Now",
-              externalLink: "https://platform.x5gon.org/search",
+              externalLink: "https://discovery.x5gon.org",
             },
           }}
         />
