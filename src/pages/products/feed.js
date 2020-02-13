@@ -165,8 +165,8 @@ class Feed extends React.Component {
                 <p className="information">
                   The library that enables connection between the OER repository
                   and the X5GON platform. The full documentation of the library
-                  is available{" "}
-                  <a href="/files/x5gon-docs.pdf" target="blank">
+                  is available
+                  {" "}<a href="/files/x5gon-docs.pdf" target="blank">
                     HERE
                   </a>
                   .
@@ -198,14 +198,15 @@ class Feed extends React.Component {
                           <b className="doc">version</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Library
-                          Version
+                          <span className="doc doc--small">Title:</span><br />
+                          Library Version
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
@@ -219,9 +220,8 @@ class Feed extends React.Component {
                 </div>
                 <p className="information">
                   To include the library add the following line in the
-                  repository site header. Replace the{" "}
-                  <b className="doc">latest</b> parameter with the appropriate
-                  library URL parameter value.
+                  repository site header. Replace the <b className="doc">latest</b>
+                  {" "}parameter with the appropriate library URL parameter value.
                 </p>
                 <div className="doc url_baseline p-4 mb-3">
                   <p className="information">
@@ -268,19 +268,21 @@ class Feed extends React.Component {
                           <b className="doc">text</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Query
-                          Text
+                          <span className="doc doc--small">Title:</span><br />
+                          Query Text
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The query text. Longer text provides better results.
-                          If both text and url query parameters are present,{" "}
-                          <b className="doc">url</b> has the priority.
+                          If both text and url query parameters are present,
+                          {" "}<b className="doc">url</b> has the priority.
                         </td>
                       </tr>
                       <tr>
@@ -288,21 +290,22 @@ class Feed extends React.Component {
                           <b className="doc">url</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Query
-                          URL
+                          <span className="doc doc--small">Title:</span><br />
+                          Query URL
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The query URL. The URL must be associated with a
                           material stored in the X5GON database. If no such URL
-                          is found, it uses the
-                          <b className="doc">text</b> query parameter, if
-                          present.
+                          is found, it uses the <b className="doc">text</b> query
+                          parameter, if present.
                         </td>
                       </tr>
                       <tr>
@@ -310,18 +313,20 @@ class Feed extends React.Component {
                           <b className="doc">width</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                            String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Container Width
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The embedded containers width. Used to setup the
-                          container into HTML.
+                          container into HTML.<br />
                           <b className="doc">Default value</b> is <b>280px</b>.
                         </td>
                       </tr>
@@ -330,18 +335,20 @@ class Feed extends React.Component {
                           <b className="doc">height</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                            String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Container Height
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The embedded containers maximum height. Used to setup
-                          the container into HTML.
+                          the container into HTML.<br />
                           <b className="doc">Default value</b> is <b>400px</b>.
                         </td>
                       </tr>
@@ -354,16 +361,15 @@ class Feed extends React.Component {
                 <p className="information">
                   The recommendation results can be embedded by using different
                   tags. The example shows how to embed the recommendation
-                  results using the
-                  <code>iframe</code> tag. We only use the{" "}
-                  <b className="doc">text</b> query parameter for the
+                  results using the <code>iframe</code> tag. We only use the
+                  {" "}<b className="doc">text</b> query parameter for the
                   recommendations, and both <b className="doc">width</b> and
-                  <b className="doc">height</b> parameters to assign the size of
+                  {" "}<b className="doc">height</b> parameters to assign the size of
                   the embedded page.
                   <br />
-                  <b className="doc">NOTE:</b> the difference between the{" "}
-                  <b className="doc">height</b> query parameter and the iframes{" "}
-                  <b className="doc">height</b> style, which is 25px. This is
+                  <b className="doc">NOTE:</b> the difference between the
+                  {" "}<b className="doc">height</b> query parameter and the iframes
+                  {" "}<b className="doc">height</b> style, which is 25px. This is
                   due to the iframes default configuration.
                 </p>
                 <div className="doc url_baseline p-4 mb-3">
@@ -520,14 +526,15 @@ class Feed extends React.Component {
                           <b className="doc">text</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                            String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Query
-                          Text
+                          <span className="doc doc--small">Title:</span><br />
+                          Query Text
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
@@ -537,22 +544,198 @@ class Feed extends React.Component {
                       </tr>
                       <tr>
                         <td>
-                          <b className="doc">type</b>
+                          <b className="doc">types</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                            String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
-                          Material Type
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Types
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The type of open educational resources. Possible
-                          options: all, video, audio and text.
+                          The type of open educational resources. There are two
+                          approaches of setting this value: <br />
+                          (1) set the type group. Options: all, video, audio and text.<br />
+                          (2) provide a string of file extensions separated by a comma
+                          (example: <code>pdf,doc,docx,mp4</code>).<br />
                           <b className="doc">Default value</b> is <b>all</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">licenses</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            String
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Licenses
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          Filters the open educational resources based on the
+                          provided licenses. One can provide multiple Licenses
+                          separated by a comma (example: <code>by,by-nd</code>).
+                          If parameter is <code>cc</code> returns materials that
+                          have the license present. If Null, no filtering is performed.
+                          Options: cc, by, by-nc, by-sa,
+                          by-nd, by-nc-nd, by-nc-sa. <br />
+                          <b className="doc">Default value</b> is <b>Null</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">languages</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            String
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Languages
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          The language of the open educational resources. This
+                          parameter is a string of ISO 639-1 code languages separated
+                          by a comma (example: <code>sl,es,de</code>). If Null,
+                          no filtering is performed.<br />
+                          <b className="doc">Default value</b> is <b>Null</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">content_languages</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            String
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Content Languages
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          The content languages of the open educational resources.
+                          This parameter filters out resources that have content
+                          (i.e. transcriptions, translations) available in the
+                          provided content languages. It is a string of ISO 639-1
+                          code languages separated by a comma
+                          (example: <code>sl,es,de</code>). If Null, no filtering
+                          by content languages is performed.<br />
+                          <b className="doc">Default value</b> is <b>Null</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">provider_ids</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            String
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Provider IDs
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          The list of material provider IDs. This parameter filters out
+                          resources that are associated with the OER providers associated.
+                          (example: <code>1,10</code>). If Null, no filtering by
+                          providers is done<br />
+                          <b className="doc">Default value</b> is <b>Null</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">wikipedia</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            Boolean
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Material Wikipedia
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          If True, provides the list of Wikipedia concepts associated with the
+                          resource. If False, otherwise.<br />
+                          <b className="doc">Default value</b> is <b>False</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">wikipedia_limit</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            Integer
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Wikipedia List Length
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          The number of top Wikipedia concepts returned if the
+                          {" "}<code>wikipedia</code> parameter is present. If Null,
+                          returns all Wikipedia concepts.<br />
+                          <b className="doc">Default value</b> is <b>Null</b>.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b className="doc">limit</b>
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Type:</span><br />
+                            Integer
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Title:</span><br />
+                          Page Limit
+                        </td>
+                        <td>
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
+                        </td>
+                        <td>
+                          The number of open eduational resources to return.
+                          If the value is zero or bellow, it automatically returns
+                          the default number of resources. If value is greater than 100
+                          returns 100 resources.<br />
+                          <b className="doc">Default value</b> is <b>20</b>.
                         </td>
                       </tr>
                       <tr>
@@ -560,16 +743,19 @@ class Feed extends React.Component {
                           <b className="doc">page</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                            Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Page
+                          <span className="doc doc--small">Title:</span><br />
+                          Page
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The page number of the recommended list.
+                          The page number of the recommended list.<br />
                           <b className="doc">Default value</b> is <b>1</b>.
                         </td>
                       </tr>
@@ -594,14 +780,15 @@ class Feed extends React.Component {
                           <b className="doc">query</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> JSON
+                          <span className="doc doc--small">Type:</span><br />
+                            JSON
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Query
-                          Parameters
+                          <span className="doc doc--small">Title:</span><br />
+                          Query Parameters
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -628,17 +815,17 @@ class Feed extends React.Component {
                                   <b className="doc">text</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Query Text
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The user provided query text.</td>
@@ -648,17 +835,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The material type provided.</td>
@@ -668,17 +855,17 @@ class Feed extends React.Component {
                                   <b className="doc">page</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Result Page
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The page number of the results.</td>
@@ -692,14 +879,15 @@ class Feed extends React.Component {
                           <b className="doc">rec_materials</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Recommended Materials
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -723,84 +911,64 @@ class Feed extends React.Component {
                             <tbody>
                               <tr>
                                 <td>
-                                  <b className="doc">material_id</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
-                                  Material ID
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>{" "}
-                                  true
-                                </td>
-                                <td>The unique ID of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
                                   <b className="doc">weight</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Float
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Recommendation Weight
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
-                                  The number between 0 and 1 representing the
+                                  The number representing the
                                   relevance of the OER material. Greater weight
                                   means bigger relevance.
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                  <b className="doc">url</b>
+                                  <b className="doc">material_id</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
-                                  String
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
-                                  Material URL
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material ID
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
-                                <td>The URL of the OER material.</td>
+                                <td>The unique ID of the OER material.</td>
                               </tr>
                               <tr>
                                 <td>
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The title of the OER material.</td>
@@ -810,57 +978,157 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER material.</td>
                               </tr>
                               <tr>
                                 <td>
-                                  <b className="doc">provider</b>
+                                  <b className="doc">creation_date</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
-                                  String
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Date
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
-                                  Material Provider
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Creation Date
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
-                                <td>The name of the OER materials provider.</td>
+                                <td>The creation date of the OER material.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">retrieved_date</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Date
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Retrieved Date
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The date when the OER material was indexed by the platform.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">type</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Type
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The type of the OER material.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">mimetype</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Mimetype
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The mimetype of the OER material.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">url</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material URL
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The URL of the OER material.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">website</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Container URL
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The URL where the OER material is contained on the provider's website.</td>
                               </tr>
                               <tr>
                                 <td>
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -868,22 +1136,90 @@ class Feed extends React.Component {
                                   code.
                                 </td>
                               </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">license</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Object
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material License
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>
+                                  The JSON object containing the material's short_name,
+                                  typed_name, disclaimer and license URL.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">provider</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Object
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Provider
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>
+                                  The JSON object containing the provider's id,
+                                  name and domain values.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">content_ids</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  Array
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Material Content IDs
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>
+                                  The array of material's content IDs.
+                                </td>
+                              </tr>
                               <tr className="no-bottom-border">
                                 <td>
                                   <b className="doc">wikipedia</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Wikipedia Concepts
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -915,19 +1251,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -942,19 +1278,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Integer
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept Support
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -967,26 +1303,6 @@ class Feed extends React.Component {
                                   </table>
                                 </td>
                               </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">type</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
-                                  Material Type
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>{" "}
-                                  true
-                                </td>
-                                <td>The type of the OER material.</td>
-                              </tr>
                             </tbody>
                           </table>
                         </td>
@@ -996,14 +1312,15 @@ class Feed extends React.Component {
                           <b className="doc">metadata</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> JSON
+                          <span className="doc doc--small">Type:</span><br />
+                          JSON
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Result
-                          Metadata
+                          <span className="doc doc--small">Title:</span><br />
+                          Result Metadata
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -1027,46 +1344,86 @@ class Feed extends React.Component {
                             <tbody>
                               <tr>
                                 <td>
-                                  <b className="doc">num_or_materials</b>
+                                  <b className="doc">total_hits</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Number of Found Materials
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
-                                  Number of most relevant relevant
-                                  recommendations.
+                                  Number of most relevant material
+                                  .
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                  <b className="doc">max_pages</b>
+                                  <b className="doc">total_pages</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
-                                  Max Pages
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Total Pages
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The total number of result pages.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">prev_page</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Previous Page
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The URL to the previous result page.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <b className="doc">next_page</b>
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Type:</span><br />
+                                  String
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">Title:</span><br />
+                                  Next Page
+                                </td>
+                                <td>
+                                  <span className="doc doc--small">
+                                    Read only:
+                                  </span><br />
+                                  true
+                                </td>
+                                <td>The URL to the next result page.</td>
                               </tr>
                             </tbody>
                           </table>
@@ -1121,14 +1478,15 @@ class Feed extends React.Component {
                           <b className="doc">text</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Query
-                          Text
+                          <span className="doc doc--small">Title:</span><br />
+                          Query Text
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
@@ -1141,18 +1499,20 @@ class Feed extends React.Component {
                           <b className="doc">type</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Type
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The type of open educational resources. Possible
-                          options: all, video, audio and text.
+                          options: all, video, audio and text.<br />
                           <b className="doc">Default value</b> is <b>all</b>.
                         </td>
                       </tr>
@@ -1161,16 +1521,19 @@ class Feed extends React.Component {
                           <b className="doc">page</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Page
+                          <span className="doc doc--small">Title:</span><br />
+                          Page
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The page number of the recommended list.
+                          The page number of the recommended list.<br />
                           <b className="doc">Default value</b> is <b>1</b>.
                         </td>
                       </tr>
@@ -1195,14 +1558,15 @@ class Feed extends React.Component {
                           <b className="doc">rec_materials</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Recommended Materials
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -1229,17 +1593,17 @@ class Feed extends React.Component {
                                   <b className="doc">material_id</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material ID
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The unique ID of the OER material.</td>
@@ -1249,17 +1613,17 @@ class Feed extends React.Component {
                                   <b className="doc">weight</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Float
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Recommendation Weight
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1273,17 +1637,17 @@ class Feed extends React.Component {
                                   <b className="doc">url</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material URL
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The URL of the OER material.</td>
@@ -1293,17 +1657,17 @@ class Feed extends React.Component {
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The title of the OER material.</td>
@@ -1313,17 +1677,17 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER material.</td>
@@ -1333,17 +1697,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Provider
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The name of the OER materials provider.</td>
@@ -1353,17 +1717,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1376,17 +1740,17 @@ class Feed extends React.Component {
                                   <b className="doc">wikipedia</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Wikipedia Concepts
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1418,19 +1782,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -1445,19 +1809,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Integer
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept Support
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -1475,17 +1839,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The type of the OER material.</td>
@@ -1542,14 +1906,15 @@ class Feed extends React.Component {
                           <b className="doc">url</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> website
-                          URL
+                          <span className="doc doc--small">Title:</span><br />
+                          Website URL
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
@@ -1562,16 +1927,19 @@ class Feed extends React.Component {
                           <b className="doc">page</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Page
+                          <span className="doc doc--small">Title:</span><br />
+                          Page
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The page number of the recommended list.
+                          The page number of the recommended list.<br />
                           <b className="doc">Default value</b> is <b>1</b>.
                         </td>
                       </tr>
@@ -1596,14 +1964,15 @@ class Feed extends React.Component {
                           <b className="doc">rec_bundles</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Recommended Bundles
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -1630,17 +1999,17 @@ class Feed extends React.Component {
                                   <b className="doc">weight</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Float
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Recommendation Weight
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1654,17 +2023,17 @@ class Feed extends React.Component {
                                   <b className="doc">url</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle URL
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The URL of the OER bundle.</td>
@@ -1674,17 +2043,17 @@ class Feed extends React.Component {
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The title of the OER bundle.</td>
@@ -1694,17 +2063,17 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER bundle.</td>
@@ -1714,17 +2083,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Provider
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The name of the OER bundle provider.</td>
@@ -1734,17 +2103,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1757,17 +2126,17 @@ class Feed extends React.Component {
                                   <b className="doc">wikipedia</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Wikipedia Concepts
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -1798,19 +2167,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -1825,19 +2194,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Integer
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept Support
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -1855,17 +2224,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The dominant type of the OER bundle.</td>
@@ -1931,16 +2300,19 @@ class Feed extends React.Component {
                           <b className="doc">page</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Page
+                          <span className="doc doc--small">Title:</span><br />
+                          Page
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The page number of the recommended list.
+                          The page number of the recommended list.<br />
                           <b className="doc">Default value</b> is <b>1</b>.
                         </td>
                       </tr>
@@ -1965,14 +2337,15 @@ class Feed extends React.Component {
                           <b className="doc">rec_bundles</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Personalized Bundles
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -1999,17 +2372,17 @@ class Feed extends React.Component {
                                   <b className="doc">weight</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Float
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Recommendation Weight
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2023,17 +2396,17 @@ class Feed extends React.Component {
                                   <b className="doc">url</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle URL
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The URL of the OER bundle.</td>
@@ -2043,17 +2416,17 @@ class Feed extends React.Component {
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The title of the OER bundle.</td>
@@ -2063,17 +2436,17 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER bundle.</td>
@@ -2083,17 +2456,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Provider
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The name of the OER bundle provider.</td>
@@ -2103,17 +2476,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2126,17 +2499,17 @@ class Feed extends React.Component {
                                   <b className="doc">wikipedia</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Wikipedia Concepts
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2167,19 +2540,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -2194,19 +2567,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Integer
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Wikipedia Concept Support
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -2224,17 +2597,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Bundle Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The dominant type of the OER bundle.</td>
@@ -2252,7 +2625,7 @@ class Feed extends React.Component {
                   This section contains the API routes for retrieving resources
                   based on the query parameters. It contains different examples
                   of resource retrieval based on the provided query parameters.
-                  <b className="doc">NOTE:</b> Some of the API routes are
+                  {" "}<b className="doc">NOTE:</b> Some of the API routes are
                   private and are available only to those who have special
                   credentials.
                 </p>
@@ -2404,14 +2777,16 @@ class Feed extends React.Component {
                           <b className="doc">languages</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Languages
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           A comma-separated list of languages in ISO 639-1 code.
@@ -2422,16 +2797,19 @@ class Feed extends React.Component {
                           <b className="doc">limit</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Limit
+                          <span className="doc doc--small">Title:</span><br />
+                          Limit
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
-                          The number of records to return.
+                          The number of records to return.<br />
                           <b className="doc">Default value</b> is <b>20</b>.
                         </td>
                       </tr>
@@ -2440,18 +2818,21 @@ class Feed extends React.Component {
                           <b className="doc">offset</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Offset
+                          <span className="doc doc--small">Title:</span><br />
+                          Offset
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The number of records from a collection to skip.
                           Iterating over large collections with this parameter
-                          can be slow.
+                          can be slow.<br />
                           <b className="doc">Default value</b> is <b>0</b>.
                         </td>
                       </tr>
@@ -2460,13 +2841,16 @@ class Feed extends React.Component {
                           <b className="doc">page</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Page
+                          <span className="doc doc--small">Title:</span><br />
+                          Page
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span> true
+                          <span className="doc doc--small">Optional:</span><br />
+                          true
                         </td>
                         <td>
                           The page number of the record collection. It overrides
@@ -2494,14 +2878,15 @@ class Feed extends React.Component {
                           <b className="doc">oer_materials</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> OER
-                          Materials
+                          <span className="doc doc--small">Title:</span><br />
+                          OER Materials
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -2528,17 +2913,17 @@ class Feed extends React.Component {
                                   <b className="doc">material_id</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material ID
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The unique ID of the OER material.</td>
@@ -2548,17 +2933,17 @@ class Feed extends React.Component {
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The title of the OER material.</td>
@@ -2568,17 +2953,17 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER material.</td>
@@ -2588,17 +2973,17 @@ class Feed extends React.Component {
                                   <b className="doc">url</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material URL
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The URL of the OER material.</td>
@@ -2608,17 +2993,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2631,17 +3016,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The type of the OER material.</td>
@@ -2651,17 +3036,17 @@ class Feed extends React.Component {
                                   <b className="doc">mimetype</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Mimetype
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The mimetype of the OER material.</td>
@@ -2671,17 +3056,17 @@ class Feed extends React.Component {
                                   <b className="doc">content_ids</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Content IDs
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2698,17 +3083,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   JSON
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Provider
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -2768,18 +3153,20 @@ class Feed extends React.Component {
                           <b className="doc">api_key</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> API Key
+                          <span className="doc doc--small">Title:</span><br />
+                          API Key
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
                           The API key used to submit the OER materials.
-                          <b className="doc">NOTE:</b> to obtain an API key,
+                          {" "}<b className="doc">NOTE:</b> to obtain an API key,
                           please contact the project administrator.
                         </td>
                       </tr>
@@ -2788,14 +3175,15 @@ class Feed extends React.Component {
                           <b className="doc">oer_materials</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> OER
-                          Materials
+                          <span className="doc doc--small">Title:</span><br />
+                          OER Materials
                         </td>
                         <td>
-                          <span className="doc doc--small">Optional:</span>{" "}
+                          <span className="doc doc--small">Optional:</span><br />
                           false
                         </td>
                         <td>
@@ -2822,17 +3210,17 @@ class Feed extends React.Component {
                                   <b className="doc">title</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Title
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>The title of the OER material.</td>
@@ -2842,17 +3230,17 @@ class Feed extends React.Component {
                                   <b className="doc">description</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Description
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The description of the OER material.</td>
@@ -2862,17 +3250,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider_uri</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Provider URI
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>
@@ -2885,17 +3273,17 @@ class Feed extends React.Component {
                                   <b className="doc">material_url</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material URL
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>The URL of the OER material.</td>
@@ -2905,17 +3293,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>
@@ -2928,17 +3316,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>
@@ -2967,19 +3355,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Material Extension
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Optional:
-                                          </span>{" "}
+                                          </span><br />
                                           false
                                         </td>
                                         <td>
@@ -2994,19 +3382,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           String
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Material Mimetype
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Optional:
-                                          </span>{" "}
+                                          </span><br />
                                           false
                                         </td>
                                         <td>The mimetype of the material.</td>
@@ -3020,23 +3408,23 @@ class Feed extends React.Component {
                                   <b className="doc">date_created</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Datetime
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Creation Date
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span>
                                   true
                                 </td>
                                 <td>
                                   The date of the materials creation.
-                                  <b className="doc">Format</b> is{" "}
-                                  <b>YYYY-MM-DD</b>.
+                                  {" "}<b className="doc">Format</b> is
+                                  {" "}<b>YYYY-MM-DD</b>.
                                 </td>
                               </tr>
                               <tr>
@@ -3044,17 +3432,17 @@ class Feed extends React.Component {
                                   <b className="doc">provider_token</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material Provider Token
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>
@@ -3071,17 +3459,17 @@ class Feed extends React.Component {
                                   <b className="doc">license</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material License
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Optional:
-                                  </span>{" "}
+                                  </span><br />
                                   false
                                 </td>
                                 <td>
@@ -3115,14 +3503,15 @@ class Feed extends React.Component {
                           <b className="doc">num_submitted</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Number
-                          of Materials Submitted
+                          <span className="doc doc--small">Title:</span><br />
+                          Number of Materials Submitted
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>Number of successfully submitted materials.</td>
@@ -3132,19 +3521,20 @@ class Feed extends React.Component {
                           <b className="doc">errors</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Object
+                          <span className="doc doc--small">Type:</span><br />
+                          Object
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Submission Errors
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
                           The object containing submission error information.
-                          <b className="doc">NOTE:</b> only present if there are
+                          {" "}<b className="doc">NOTE:</b> only present if there are
                           any errors.
                         </td>
                       </tr>
@@ -3167,17 +3557,17 @@ class Feed extends React.Component {
                                   <b className="doc">message</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Error Message
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The submission error message.</td>
@@ -3187,17 +3577,17 @@ class Feed extends React.Component {
                                   <b className="doc">invalid_count</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Invalid Count
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>Number of invalid materials.</td>
@@ -3207,17 +3597,17 @@ class Feed extends React.Component {
                                   <b className="doc">invalid_materials</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Array
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Invalid Materials
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3247,19 +3637,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Object
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           OER Material
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -3274,19 +3664,19 @@ class Feed extends React.Component {
                                         <td>
                                           <span className="doc doc--small">
                                             Type:
-                                          </span>{" "}
+                                          </span><br />
                                           Array
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Title:
-                                          </span>{" "}
+                                          </span><br />
                                           Material Errors
                                         </td>
                                         <td>
                                           <span className="doc doc--small">
                                             Read only:
-                                          </span>{" "}
+                                          </span><br />
                                           true
                                         </td>
                                         <td>
@@ -3371,14 +3761,15 @@ class Feed extends React.Component {
                           <b className="doc">material_id</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material ID
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The unique ID of the OER material.</td>
@@ -3388,14 +3779,15 @@ class Feed extends React.Component {
                           <b className="doc">title</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Title
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The title of the OER material.</td>
@@ -3405,14 +3797,15 @@ class Feed extends React.Component {
                           <b className="doc">description</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Description
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The description of the OER material.</td>
@@ -3422,14 +3815,15 @@ class Feed extends React.Component {
                           <b className="doc">url</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material URL
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The URL of the OER material.</td>
@@ -3439,14 +3833,15 @@ class Feed extends React.Component {
                           <b className="doc">language</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Language
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3458,14 +3853,15 @@ class Feed extends React.Component {
                           <b className="doc">type</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Type
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The type of the OER material.</td>
@@ -3475,14 +3871,15 @@ class Feed extends React.Component {
                           <b className="doc">mimetype</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Mimetype
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The mimetype of the OER material.</td>
@@ -3492,20 +3889,21 @@ class Feed extends React.Component {
                           <b className="doc">content_ids</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Content IDs
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
                           The IDs of the material contents. Can be accessed
                           through
-                          <Link to="/products/feed#get-info-about-oer-content">
+                          {" "}<Link to="/products/feed#get-info-about-oer-content">
                             content info method
                           </Link>
                           .
@@ -3516,14 +3914,15 @@ class Feed extends React.Component {
                           <b className="doc">provider</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> JSON
+                          <span className="doc doc--small">Type:</span><br />
+                          JSON
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span>{" "}
+                          <span className="doc doc--small">Title:</span><br />
                           Material Provider
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3600,19 +3999,20 @@ class Feed extends React.Component {
                           <b className="doc">oer_materials</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> JSON
+                          <span className="doc doc--small">Type:</span><br />
+                          JSON
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> OER
-                          Materials
+                          <span className="doc doc--small">Title:</span><br />
+                          OER Materials
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
                           The JSON object of the OER material with ID equal to
-                          <code>material_id</code> (path parameter).
+                          {" "}<code>material_id</code> (path parameter).
                         </td>
                       </tr>
                       <tr className="no-top-border">
@@ -3634,17 +4034,17 @@ class Feed extends React.Component {
                                   <b className="doc">material_id</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Material ID
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>The unique ID of the OER material.</td>
@@ -3658,14 +4058,15 @@ class Feed extends React.Component {
                           <b className="doc">oer_contents</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Array
+                          <span className="doc doc--small">Type:</span><br />
+                          Array
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> OER
-                          Material Contents
+                          <span className="doc doc--small">Title:</span><br />
+                          OER Material Contents
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3692,17 +4093,17 @@ class Feed extends React.Component {
                                   <b className="doc">content_id</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   Integer
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Content ID
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3714,17 +4115,17 @@ class Feed extends React.Component {
                                   <b className="doc">type</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Content Type
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3738,17 +4139,17 @@ class Feed extends React.Component {
                                   <b className="doc">extension</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Content Extension
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3761,17 +4162,17 @@ class Feed extends React.Component {
                                   <b className="doc">value</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   JSON
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Content Value
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3784,17 +4185,17 @@ class Feed extends React.Component {
                                   <b className="doc">language</b>
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Type:</span>{" "}
+                                  <span className="doc doc--small">Type:</span><br />
                                   String
                                 </td>
                                 <td>
-                                  <span className="doc doc--small">Title:</span>{" "}
+                                  <span className="doc doc--small">Title:</span><br />
                                   Content Language
                                 </td>
                                 <td>
                                   <span className="doc doc--small">
                                     Read only:
-                                  </span>{" "}
+                                  </span><br />
                                   true
                                 </td>
                                 <td>
@@ -3884,14 +4285,15 @@ class Feed extends React.Component {
                           <b className="doc">content_id</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> Integer
+                          <span className="doc doc--small">Type:</span><br />
+                          Integer
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Content
-                          ID
+                          <span className="doc doc--small">Title:</span><br />
+                          Content ID
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>The unique ID of the content of OER material.</td>
@@ -3901,14 +4303,15 @@ class Feed extends React.Component {
                           <b className="doc">type</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Content
-                          Type
+                          <span className="doc doc--small">Title:</span><br />
+                          Content Type
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3921,14 +4324,15 @@ class Feed extends React.Component {
                           <b className="doc">extension</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Content
-                          Extension
+                          <span className="doc doc--small">Title:</span><br />
+                          Content Extension
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3941,14 +4345,15 @@ class Feed extends React.Component {
                           <b className="doc">value</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> JSON
+                          <span className="doc doc--small">Type:</span><br />
+                          JSON
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Content
-                          Value
+                          <span className="doc doc--small">Title:</span><br />
+                          Content Value
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -3961,14 +4366,15 @@ class Feed extends React.Component {
                           <b className="doc">language</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
-                          <span className="doc doc--small">Title:</span> Content
-                          Language
+                          <span className="doc doc--small">Title:</span><br />
+                          Content Language
                         </td>
                         <td>
-                          <span className="doc doc--small">Read only:</span>{" "}
+                          <span className="doc doc--small">Read only:</span><br />
                           true
                         </td>
                         <td>
@@ -4051,7 +4457,8 @@ class Feed extends React.Component {
                           <b className="doc">content body</b>
                         </td>
                         <td>
-                          <span className="doc doc--small">Type:</span> String
+                          <span className="doc doc--small">Type:</span><br />
+                          String
                         </td>
                         <td>
                           The body value of the content of a specific open

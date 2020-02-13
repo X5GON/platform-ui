@@ -51,6 +51,10 @@ ul {
 .doc {
 	/* font-weight: bold; */
 }
+.doc--small {
+	font-size: 12px;
+	white-space: nowrap;
+}
 .doc p {
 	margin: 0;
 }
