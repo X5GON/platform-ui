@@ -1,7 +1,7 @@
 import React from "react";
-import "../css/homepage.css";
 import "../css/bootstrap.css";
 import "../css/accordion.css";
+import "../css/homepage.css";
 import { Link } from "gatsby";
 import fetch from "isomorphic-fetch";
 import { StandardHeader } from "../ProductsComponents";
@@ -117,7 +117,7 @@ export default class OERProvider extends React.Component {
         <div className="mx-lg-1 px-4">
           <h4 className="maxer-880 text-purple">
             Loading{" "}
-            <img src="/imgs/svgs/loading.svg" alt="loading" height="65px" />
+            <img src="/imgs/svgs/Loading.svg" alt="loading" height="65px" />
           </h4>
         </div>
       </div>

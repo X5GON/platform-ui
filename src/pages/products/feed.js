@@ -665,7 +665,7 @@ class Feed extends React.Component {
                           The list of material provider IDs. This parameter filters out
                           resources that are associated with the OER providers associated.
                           (example: <code>1,10</code>). If Null, no filtering by
-                          providers is done<br />
+                          providers is done.<br />
                           <b className="doc">Default value</b> is <b>Null</b>.
                         </td>
                       </tr>
@@ -687,7 +687,7 @@ class Feed extends React.Component {
                         </td>
                         <td>
                           If True, provides the list of Wikipedia concepts associated with the
-                          resource. If False, otherwise.<br />
+                          resource.<br />
                           <b className="doc">Default value</b> is <b>False</b>.
                         </td>
                       </tr>
