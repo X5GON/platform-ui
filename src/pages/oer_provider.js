@@ -3,7 +3,6 @@ import "../css/bootstrap.css";
 import "../css/accordion.css";
 import "../css/homepage.css";
 import { Link } from "gatsby";
-import fetch from "isomorphic-fetch";
 import { StandardHeader } from "../ProductsComponents";
 import { Footer } from "../Components";
 import { graphql, StaticQuery } from "gatsby";
