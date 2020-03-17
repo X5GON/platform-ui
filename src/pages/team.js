@@ -26,10 +26,20 @@ class Team extends React.Component {
         photo: "colin.jpg",
       },
       {
+        person: "Yvonne Rogers",
+        position: "director UCLIC, University College London",
+        photo: "yvonne_rogers.png",
+      },
+      {
         person: "Erik Novak",
         position:
           "Data Science Researcher, Artificial Intelligence Laboratory, Jozef Stefan Institute",
         photo: "erik.jpg",
+      },
+      {
+        person: "María Pérez",
+        position: "Research Fellow, AI Centre, University College London",
+        photo: "maria.png",
       },
       {
         person: "Kristijan Percic",
@@ -46,6 +56,16 @@ class Team extends React.Component {
         person: "Davor Orlic",
         position: "Chief Operating Officer, Knowledge 4 All Fundation",
         photo: "davor.jpg",
+      },
+      {
+        person: "Mihajela Crnko",
+        position: "Head of Videolectures.Net",
+        photo: "Mihajela.png",
+      },
+      {
+        person: "Emine Ylmaz",
+        position: "Turing Fellow, University College London",
+        photo: "Emine.png",
       },
     ];
     return (
