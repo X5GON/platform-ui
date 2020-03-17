@@ -49,7 +49,7 @@ export default class Recommend extends React.Component {
             description: "Show your content in a network of other sites!",
             button: {
               text: "Try Now",
-              link: "",
+              externalLink: "http://x5learn.org/",
             },
           }}
         />

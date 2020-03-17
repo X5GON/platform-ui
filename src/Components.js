@@ -281,6 +281,7 @@ export const MoreProducts = props => {
     {
       todo: "Recommend",
       text: "Show your content in a network of other sites",
+      tryLink: "http://x5learn.org/",
       link: "recommend",
       image: "recommend.png",
     },
