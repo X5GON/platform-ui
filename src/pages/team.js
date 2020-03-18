@@ -67,6 +67,11 @@ class Team extends React.Component {
         position: "Turing Fellow, University College London",
         photo: "Emine.png",
       },
+      {
+        person: "Martin Molan",
+        position: "Jožef Stefan International Postgraduate School",
+        photo: "martin_molan.png",
+      },
     ];
     return (
       <div className="p-5 products" id="products">
