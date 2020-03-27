@@ -26,9 +26,9 @@ class Team extends React.Component {
         photo: "colin.jpg",
       },
       {
-        person: "Yvonne Rogers",
-        position: "director UCLIC, University College London",
-        photo: "yvonne_rogers.png",
+        person: "Davor Orlic",
+        position: "Chief Operating Officer, Knowledge 4 All Fundation",
+        photo: "davor.jpg",
       },
       {
         person: "Erik Novak",
@@ -37,14 +37,9 @@ class Team extends React.Component {
         photo: "erik.jpg",
       },
       {
-        person: "María Pérez",
-        position: "Research Fellow, AI Centre, University College London",
-        photo: "maria.png",
-      },
-      {
-        person: "Kristijan Percic",
-        position: "Innovation Sector, Slovenian Post Office",
-        photo: "kristijan.png",
+        person: "Sahan Bulathwela",
+        position: "Research Assistant, University College London",
+        photo: "sahan.png",
       },
       {
         person: "Gregor Žunič",
@@ -53,9 +48,27 @@ class Team extends React.Component {
         photo: "gregor.jpg",
       },
       {
-        person: "Davor Orlic",
-        position: "Chief Operating Officer, Knowledge 4 All Fundation",
-        photo: "davor.jpg",
+        person: "Kristijan Percic",
+        position: "Innovation Sector, Slovenian Post Office",
+        photo: "kristijan.png",
+      },
+
+      {
+        person: "Yvonne Rogers",
+        position: "director UCLIC, University College London",
+        photo: "yvonne_rogers.png",
+      },
+
+      {
+        person: "María Pérez",
+        position: "Research Fellow, AI Centre, University College London",
+        photo: "maria.png",
+      },
+
+      {
+        person: "Martin Molan",
+        position: "Jožef Stefan International Postgraduate School",
+        photo: "martin_molan.png",
       },
       {
         person: "Mihajela Crnko",
@@ -63,14 +76,20 @@ class Team extends React.Component {
         photo: "Mihajela.png",
       },
       {
+        person: "Floarian Feyen",
+        position: "Research Fellow, virtUOS, University of Osnabrueck",
+        photo: "feyenflorian.png",
+      },
+      {
+        person: "Rüdiger Rolf",
+        position: "Research Fellow, virtUOS, University of Osnabrueck",
+        photo: "rrolf.png",
+      },
+
+      {
         person: "Emine Ylmaz",
         position: "Turing Fellow, University College London",
         photo: "Emine.png",
-      },
-      {
-        person: "Martin Molan",
-        position: "Jožef Stefan International Postgraduate School",
-        photo: "martin_molan.png",
       },
     ];
     return (
@@ -88,7 +107,7 @@ class Team extends React.Component {
             <div className="row p-2 pt-3">
               {contents.map((content, index) => {
                 return (
-                  <div className="col-6 col-lg-3 col-md-4 pb-3" key={index}>
+                  <div className="col-6 col-lg-3 col-md-4 pb-5" key={index}>
                     <div className="px-sm-3 mx-auto text-left">
                       <img
                         className="mx-auto partners-imgs"
