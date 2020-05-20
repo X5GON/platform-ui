@@ -69,14 +69,6 @@ class Feed extends React.Component {
                                   GET search for relevant materials
                                 </Link>
                               </li>
-                              <li>
-                                <Link
-                                  className="doc route"
-                                  to="/products/feed#version-2-recommend-bundles"
-                                >
-                                  GET recommended bundles (web pages)
-                                </Link>
-                              </li>
                             </ul>
                           </li>
                         </ul>
@@ -197,7 +189,8 @@ class Feed extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container api ml-0 pl-0 text-purple  pt-5 mt-5 pb-128">
+
+        <div className="container api ml-0 pl-0 text-purple pt-5 mt-5 pb-128">
           <div className="row">
             <div className="col">
               <this.Accordion
@@ -235,31 +228,16 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">version</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Library Version
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          false
-                        </td>
-                        <td>
-                          The version of the library. The options are: v1, v2,
+                      <this.QueryTableRow
+                        name={"version"}
+                        type={"String"}
+                        title={"Library Version"}
+                        optional={"false"}
+                        desc={
+                          `The version of the library. The options are: v1, v2,
                           and latest. If latest, it will automatically take the
-                          latest version available.
-                        </td>
-                      </tr>
+                          latest version available.`
+                        }></this.QueryTableRow>
                     </tbody>
                   </table>
                 </div>
@@ -309,109 +287,56 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">text</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query Text
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The query text. Longer text provides better results.
-                          If both text and url query parameters are present,{" "}
-                          <b className="doc">url</b> has the priority.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">url</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query URL
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The query URL. The URL must be associated with a
+                      <this.QueryTableRow
+                        name={"text"}
+                        type={"String"}
+                        title={"Query Text"}
+                        optional={"true"}
+                        desc={
+                          `The query text. Longer text provides better results.
+                          If both text and url query parameters are present,
+                          <b className="doc">url</b> has the priority.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"url"}
+                        type={"String"}
+                        title={"Query URL"}
+                        optional={"true"}
+                        desc={
+                          `The query URL. The URL must be associated with a
                           material stored in the X5GON database. If no such URL
                           is found, it uses the <b className="doc">text</b>{" "}
-                          query parameter, if present.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">width</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Container Width
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The embedded containers width. Used to setup the
+                          query parameter, if present.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"width"}
+                        type={"String"}
+                        title={"Container Width"}
+                        optional={"true"}
+                        desc={
+                          `The embedded containers width. Used to setup the
                           container into HTML.
                           <br />
-                          <b className="doc">Default value</b> is <b>280px</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">height</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Container Height
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The embedded containers maximum height. Used to setup
+                          <b className="doc">Default value</b> is <b>280px</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"height"}
+                        type={"String"}
+                        title={"Container Height"}
+                        optional={"true"}
+                        desc={
+                          `The embedded containers maximum height. Used to setup
                           the container into HTML.
                           <br />
-                          <b className="doc">Default value</b> is <b>400px</b>.
-                        </td>
-                      </tr>
+                          <b className="doc">Default value</b> is <b>400px</b>.`
+                        }
+                      ></this.QueryTableRow>
                     </tbody>
                   </table>
                 </div>
@@ -505,18 +430,6 @@ class Feed extends React.Component {
                           Get a list of relevant open educational resources
                         </td>
                       </tr>
-                      <tr
-                        className="clickable-row"
-                        data-href="#version-2-recommend-bundles"
-                      >
-                        <td>
-                          <b className="doc">GET</b>
-                        </td>
-                        <td>/recommend/oer_bundles</td>
-                        <td>
-                          Get a list of most relevant open educational bundles
-                        </td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -560,51 +473,24 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">text</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query Text
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          false
-                        </td>
-                        <td>
-                          The seed text from which the system finds the relevant
-                          open educational resources.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">types</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Types
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The type of open educational resources. There are two
+                      <this.QueryTableRow
+                        name={"text"}
+                        type={"String"}
+                        title={"Query Text"}
+                        optional={"false"}
+                        desc={
+                          `The seed text from which the system finds the relevant
+                          open educational resources.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"types"}
+                        type={"String"}
+                        title={"Material Types"}
+                        optional={"true"}
+                        desc={
+                          `The type of open educational resources. There are two
                           approaches of setting this value: <br />
                           (1) set the type group. Options: all, video, audio,
                           text, and image. <b>Note:</b> When all, it will retrieve
@@ -615,88 +501,49 @@ class Feed extends React.Component {
                           (2) provide a string of file extensions separated by a
                           comma (example: <code>pdf,doc,docx,mp4</code>).
                           <br />
-                          <b className="doc">Default value</b> is <b>all</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">licenses</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Licenses
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          Filters the open educational resources based on the
+                          <b className="doc">Default value</b> is <b>all</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"licenses"}
+                        type={"String"}
+                        title={"Material Licenses"}
+                        optional={"true"}
+                        desc={
+                          `Filters the open educational resources based on the
                           provided licenses. One can provide multiple Licenses
                           separated by a comma (example: <code>by,by-nd</code>
                           ). If parameter is <code>cc</code> returns materials
                           that have the license present. If Null, no filtering
                           is performed. Options: cc, by, by-nc, by-sa, by-nd,
                           by-nc-nd, by-nc-sa. <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">languages</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Languages
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The language of the open educational resources. This
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"languages"}
+                        type={"String"}
+                        title={"Material Languages"}
+                        optional={"true"}
+                        desc={
+                          `The language of the open educational resources. This
                           parameter is a string of ISO 639-1 code languages
                           separated by a comma (example: <code>sl,es,de</code>
                           ). If Null, no filtering is performed.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">content_languages</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Content Languages
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The content languages of the open educational
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"content_languages"}
+                        type={"String"}
+                        title={"Material Content Languages"}
+                        optional={"true"}
+                        desc={
+                          `The content languages of the open educational
                           resources. This parameter filters out resources that
                           have content (i.e. transcriptions, translations)
                           available in the provided content languages. It is a
@@ -704,174 +551,111 @@ class Feed extends React.Component {
                           comma (example: <code>sl,es,de</code>). If Null, no
                           filtering by content languages is performed.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">content_extension</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Content Extension
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The content extension of the open educational resources.
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"content_extension"}
+                        type={"String"}
+                        title={"Material Content Extension"}
+                        optional={"true"}
+                        desc={
+                          `The content extension of the open educational resources.
                           If this parameter is present, it will retrieve only
                           resources which contain the contents with the user
                           specified extensions. In addition, the contents of that type
-                          will be in the result object under the <code>contents</code>{" "}
+                          will be in the result object under the <code>contents</code>
                           attribute.
                           Possible options: dfxp, webvtt, plain.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">provider_ids</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Provider IDs
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The list of material provider IDs. This parameter
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"provider_ids"}
+                        type={"String"}
+                        title={"Material Provider IDs"}
+                        optional={"true"}
+                        desc={
+                          `The list of material provider IDs. This parameter
                           filters out resources that are associated with the OER
                           providers associated. (example: <code>1,10</code>). If
                           Null, no filtering by providers is done.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">wikipedia</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Boolean
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Wikipedia
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          If True, provides the list of Wikipedia concepts
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"wikipedia"}
+                        type={"Boolean"}
+                        title={"Material Wikipedia"}
+                        optional={"true"}
+                        desc={
+                          `If True, provides the list of Wikipedia concepts
                           associated with the resource.
                           <br />
-                          <b className="doc">Default value</b> is <b>False</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">wikipedia_limit</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Wikipedia List Length
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The number of top Wikipedia concepts returned if the{" "}
+                          <b className="doc">Default value</b> is <b>False</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"wikipedia_limit"}
+                        type={"Integer"}
+                        title={"Wikipedia List Length"}
+                        optional={"true"}
+                        desc={
+                          `The number of top Wikipedia concepts returned if the
                           <code>wikipedia</code> parameter is present. If Null,
                           returns all Wikipedia concepts.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">limit</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"sort_by"}
+                        type={"String"}
+                        title={"Sort By Field"}
+                        optional={"true"}
+                        desc={
+                          `Sorts by the provided material field in descending order.
+                          Possible options are: <code>creation_date</code> and
+                          <code>retrieved_date</code>.
                           <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Page Limit
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The number of open eduational resources to return. If
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"limit"}
+                        type={"Integer"}
+                        title={"Page Limit"}
+                        optional={"true"}
+                        desc={
+                          `The number of open eduational resources to return. If
                           the value is zero or bellow, it automatically returns
                           the default number of resources. If value is greater
                           than 100 returns 100 resources.
                           <br />
-                          <b className="doc">Default value</b> is <b>20</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">page</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
+                          <b className="doc">Default value</b> is <b>20</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"page"}
+                        type={"Integer"}
+                        title={"Page"}
+                        optional={"true"}
+                        desc={
+                          `The page number of the recommended list.
                           <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Page
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The page number of the recommended list.
-                          <br />
-                          <b className="doc">Default value</b> is <b>1</b>.
-                        </td>
-                      </tr>
+                          <b className="doc">Default value</b> is <b>1</b>.`
+                        }
+                      ></this.QueryTableRow>
+
                     </tbody>
                   </table>
                 </div>
@@ -888,54 +672,27 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">query</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          JSON
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query Parameters
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          A JSON object containing the provided query
-                          parameters.
-                        </td>
-                      </tr>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">rec_materials</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Array
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Recommended Materials
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          An array of objects, each representing an recommended
-                          open educational resource.
-                        </td>
-                      </tr>
+
+                      <this.ResultTableRow
+                        name={"query"}
+                        type={"JSON"}
+                        title={"Query Parameters"}
+                        desc={
+                          `A JSON object containing the provided query
+                          parameters.`
+                        }
+                      ></this.ResultTableRow>
+
+                      <this.ResultTableRow
+                        name={"rec_materials"}
+                        type={"Array"}
+                        title={"Recommended Materials"}
+                        desc={
+                          `An array of objects, each representing an recommended
+                          open educational resource.`
+                        }
+                      ></this.ResultTableRow>
+
                       <tr className="no-top-border">
                         <td colSpan={5}>
                           <b className="doc">rec_materials object properties</b>
@@ -950,396 +707,160 @@ class Feed extends React.Component {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">weight</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Float
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Recommendation Weight
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The number representing the relevance of the
+
+                              <this.ResultTableRow
+                                name={"weight"}
+                                type={"Float"}
+                                title={"Recommendation Weight"}
+                                desc={
+                                  `The number representing the relevance of the
                                   OER material. Greater weight means bigger
-                                  relevance.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">material_id</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material ID
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The unique ID of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">title</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Title
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The title of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">description</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Description
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The description of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">creation_date</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Creation Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The creation date of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">retrieved_date</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Retrieved Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The date when the OER material was indexed by
-                                  the platform.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">type</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Type
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The type of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">mimetype</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Mimetype
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The mimetype of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">url</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material URL
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">website</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Container URL
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The URL where the OER material is contained on
-                                  the provider's website.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">language</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Language
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The language of the OER material in ISO 639-1
-                                  code.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">language_full</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Language
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The full language name of the OER material.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">license</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Object
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material License
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The JSON object containing the material's
+                                  relevance.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"material_id"}
+                                type={"Integer"}
+                                title={"Material ID"}
+                                desc={
+                                  `The unique ID of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"title"}
+                                type={"String"}
+                                title={"Material Title"}
+                                desc={
+                                  `The title of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"description"}
+                                type={"String"}
+                                title={"Material Description"}
+                                desc={
+                                  `The description of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"creation_date"}
+                                type={"Date"}
+                                title={"Material Creation Date"}
+                                desc={
+                                  `The creation date of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"retrieved_date"}
+                                type={"Date"}
+                                title={"Material Retrieved Date"}
+                                desc={
+                                  `The date when the OER material was indexed by
+                                  the platform.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"type"}
+                                type={"String"}
+                                title={"Material Type"}
+                                desc={
+                                  `The type of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"mimetype"}
+                                type={"String"}
+                                title={"Material Mimetype"}
+                                desc={
+                                  `The mimetype of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"url"}
+                                type={"String"}
+                                title={"Material URL"}
+                                desc={
+                                  `The URL of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"website"}
+                                type={"String"}
+                                title={"Material Container URL"}
+                                desc={
+                                  `The URL where the OER material is contained on
+                                  the provider's website.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"language"}
+                                type={"String"}
+                                title={"Material Language"}
+                                desc={
+                                  `The language of the OER material in ISO 639-1
+                                  code.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"language_full"}
+                                type={"String"}
+                                title={"Material Full Language"}
+                                desc={
+                                  `The full language name of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"license"}
+                                type={"JSON"}
+                                title={"Material License"}
+                                desc={
+                                  `The JSON object containing the material's
                                   short_name, typed_name, disclaimer and license
-                                  URL.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">provider</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Object
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Provider
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The JSON object containing the provider's id,
-                                  name and domain values.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">content_ids</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Content IDs
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The array of material's content IDs.</td>
-                              </tr>
-                              <tr className="no-bottom-border">
-                                <td>
-                                  <b className="doc">contents</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Contents
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The array of material's contents. Only present if the <code>content_extension</code> query parameter is specified.</td>
-                              </tr>
+                                  URL.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"provider"}
+                                type={"JSON"}
+                                title={"Material Provider"}
+                                desc={
+                                  `The JSON object containing the provider's id,
+                                  name and domain values.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"content_ids"}
+                                type={"Array"}
+                                title={"Material Content IDs"}
+                                desc={
+                                  `The array of material's content IDs.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"contents"}
+                                type={"Array"}
+                                title={"Material Contents"}
+                                desc={
+                                  `The array of material's contents. Only present if the
+                                  <code>content_extension</code> query parameter is specified.`
+                                }
+                              ></this.ResultTableRow>
+
                               <tr className="no-top-border">
                                 <td colSpan={5}>
                                   <b className="doc">
@@ -1356,322 +877,74 @@ class Feed extends React.Component {
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">extension</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Content Extension
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The OER material content extension.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">language</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          string
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Content Language
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The content language in ISO 639-1 code.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">type</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          string
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Content Type
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The content type (i.e. transcription, translation, etc).
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">value</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          string
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Content Value
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The actual value of the content.
-                                        </td>
-                                      </tr>
+                                      <this.ResultTableRow
+                                        name={"extension"}
+                                        type={"String"}
+                                        title={"Content Extension"}
+                                        desc={
+                                          `The OER material content extension.`
+                                        }
+                                      ></this.ResultTableRow>
+
+                                      <this.ResultTableRow
+                                        name={"language"}
+                                        type={"String"}
+                                        title={"Content Language"}
+                                        desc={
+                                          `The content language in ISO 639-1 code.`
+                                        }
+                                      ></this.ResultTableRow>
+
+                                      <this.ResultTableRow
+                                        name={"type"}
+                                        type={"String"}
+                                        title={"Content Type"}
+                                        desc={
+                                          `The content type (i.e. transcription, translation, etc).`
+                                        }
+                                      ></this.ResultTableRow>
+
+                                      <this.ResultTableRow
+                                        name={"value"}
+                                        type={"String"}
+                                        title={"Content Value"}
+                                        desc={
+                                          `The actual value of the content.`
+                                        }
+                                      ></this.ResultTableRow>
+
                                     </tbody>
                                   </table>
                                 </td>
                               </tr>
 
-                              <tr className="no-bottom-border">
-                                <td>
-                                  <b className="doc">wikipedia</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Wikipedia Concepts
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  An array of objects, each representing the
+                              <this.ResultTableRow
+                                name={"wikipedia"}
+                                type={"Array"}
+                                title={"Material Wikipedia Concepts"}
+                                desc={
+                                  `An array of objects, each representing the
                                   most relevant wikipedia concept of the
-                                  material. Only present if the
-                                  <code>wikipedia</code> query parameter is
-                                  set to True.
-                                </td>
-                              </tr>
-                              <tr className="no-top-border">
-                                <td colSpan={5}>
-                                  <b className="doc">
-                                    wikipedia object properties
-                                  </b>
-                                  <table className="table table-dashed-borders table--third-level">
-                                    <thead>
-                                      <tr>
-                                        <th className="doc doc__query name" />
-                                        <th className="doc doc__query type" />
-                                        <th className="doc doc__query title" />
-                                        <th className="doc doc__query optional" />
-                                        <th className="doc doc__query description" />
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">name</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept Original Name
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The Wikipedia concept original name.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">sec_name</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept English Name
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The Wikipedia concept English name.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">sec_name</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept English Name
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The Wikipedia concept English name.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">support</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          Integer
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept Support
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The amount of elements in the material
-                                          that support the given Wikipedia
-                                          concept.
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
+                                  material. Only present if the <code>wikipedia</code>
+                                  query parameter is set to True.`
+                                }
+                              ></this.ResultTableRow>
+
                             </tbody>
                           </table>
                         </td>
                       </tr>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">metadata</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          JSON
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Result Metadata
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          A JSON object containing the associated metadata.
-                          Helpful for navigating through the recommendations.
-                        </td>
-                      </tr>
+
+                      <this.ResultTableRow
+                        name={"metadata"}
+                        type={"JSON"}
+                        title={"Result Metadata"}
+                        desc={
+                          `A JSON object containing the associated metadata.
+                          Helpful for navigating through the recommendations.`
+                        }
+                      ></this.ResultTableRow>
+
                       <tr className="no-top-border">
                         <td colSpan={5}>
                           <b className="doc">metadata object properties</b>
@@ -1686,572 +959,42 @@ class Feed extends React.Component {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">total_hits</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Number of Found Materials
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>Number of most relevant material .</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">total_pages</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Total Pages
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The total number of result pages.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">prev_page</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Previous Page
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL to the previous result page.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">next_page</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Next Page
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL to the next result page.</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="anchor" id="version-2-recommend-bundles" />
-                <h6 className="doc doc__subsection mt-5 mb-3">
-                  Get a list of relevant open educational bundles (web pages)
-                </h6>
-                <div className="table-responsive">
-                  <table className="table table-borderless">
-                    <thead>
-                      <tr>
-                        <th className="doc doc__method request" />
-                        <th className="doc doc__method route" />
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">GET</b>
-                        </td>
-                        <td>
-                          <b>/recommend/oer_bundles</b>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p className="information">
-                  Get a list of relevant open educational bundles (web pages).
-                </p>
-                <h6 className="mt-2">Query string parameters</h6>
-                <div className="table-responsive">
-                  <table className="table table-dashed-borders">
-                    <thead>
-                      <tr>
-                        <th className="doc doc__query name" />
-                        <th className="doc doc__query type" />
-                        <th className="doc doc__query title" />
-                        <th className="doc doc__query optional" />
-                        <th className="doc doc__query description" />
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">url</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Website URL
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          false
-                        </td>
-                        <td>
-                          The URL of the website containing the OER materials.
-                          The URL must be present in the X5GON database
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">text</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Website Title
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The title of the OER materials. It is used if the URL
-                          of the material is not present in the X5GON database.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">limit</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Limit
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The upper limit of materials to be recommended.
-                          <br />
-                          <b className="doc">Default value</b> is <b>10</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">page</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Page
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The page number of the recommended list.
-                          <br />
-                          <b className="doc">Default value</b> is <b>1</b>.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <h6 className="mt-2">Response body attributes</h6>
-                <div className="table-responsive">
-                  <table className="table table-dashed-borders">
-                    <thead>
-                      <tr>
-                        <th className="doc doc__query name" />
-                        <th className="doc doc__query type" />
-                        <th className="doc doc__query title" />
-                        <th className="doc doc__query optional" />
-                        <th className="doc doc__query description" />
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">rec_bundles</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Array
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Recommended Bundles
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          An array of objects, each representing an recommended
-                          open educational resource bundle.
-                        </td>
-                      </tr>
-                      <tr className="no-top-border">
-                        <td colSpan={5}>
-                          <b className="doc">rec_bundles object properties</b>
-                          <table className="table table-dashed-borders table--second-level">
-                            <thead>
-                              <tr>
-                                <th className="doc doc__query name" />
-                                <th className="doc doc__query type" />
-                                <th className="doc doc__query title" />
-                                <th className="doc doc__query optional" />
-                                <th className="doc doc__query description" />
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">weight</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Float
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Recommendation Weight
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The number of common concepts between the
-                                  given url bundle and this OER bundle. Greater
-                                  weight means bigger relevance.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">url</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle URL
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL of the OER bundle.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">title</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Title
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The title of the OER bundle.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">description</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Description
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The description of the OER bundle.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">provider</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Provider
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The name of the OER bundle provider.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">language</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Language
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The dominant language of the OER bundle in ISO
-                                  639-1 code.
-                                </td>
-                              </tr>
-                              <tr className="no-bottom-border">
-                                <td>
-                                  <b className="doc">wikipedia</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Wikipedia Concepts
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  An array of objects, each representing the
-                                  most relevant wikipedia concept of the bundle.
-                                </td>
-                              </tr>
-                              <tr className="no-top-border">
-                                <td colSpan={5}>
-                                  <b className="doc">
-                                    wikipedia object properties
-                                  </b>
-                                  <table className="table table-dashed-borders table--third-level">
-                                    <thead>
-                                      <tr>
-                                        <th className="doc doc__query name" />
-                                        <th className="doc doc__query type" />
-                                        <th className="doc doc__query title" />
-                                        <th className="doc doc__query optional" />
-                                        <th className="doc doc__query description" />
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">concept</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The Wikipedia concept represented as
-                                          an URL.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">support</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          Integer
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept Support
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The amount of elements in the material
-                                          that support the given Wikipedia
-                                          concept.
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">type</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Bundle Type
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The dominant type of the OER bundle.</td>
-                              </tr>
+                              <this.ResultTableRow
+                                name={"total_hits"}
+                                type={"Integer"}
+                                title={"Number of Found Materials"}
+                                desc={
+                                  `Number of most relevant material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"total_pages"}
+                                type={"Integer"}
+                                title={"Total Pages"}
+                                desc={
+                                  `The total number of result pages.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"prev_page"}
+                                type={"String"}
+                                title={"Previous Page"}
+                                desc={
+                                  `The URL to the previous result page.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"next_page"}
+                                type={"String"}
+                                title={"Next Page"}
+                                desc={
+                                  `The URL to the next result page.`
+                                }
+                              ></this.ResultTableRow>
+
                             </tbody>
                           </table>
                         </td>
@@ -2391,51 +1134,24 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <b className="doc">text</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query Text
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          false
-                        </td>
-                        <td>
-                          The seed text from which the system finds the relevant
-                          open educational resources.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">types</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Types
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The type of open educational resources. There are two
+                      <this.QueryTableRow
+                        name={"text"}
+                        type={"String"}
+                        title={"Query Text"}
+                        optional={"false"}
+                        desc={
+                          `The seed text from which the system finds the relevant
+                          open educational resources.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"types"}
+                        type={"String"}
+                        title={"Material Types"}
+                        optional={"true"}
+                        desc={
+                          `The type of open educational resources. There are two
                           approaches of setting this value: <br />
                           (1) set the type group. Options: all, video, audio and
                           text.
@@ -2443,88 +1159,49 @@ class Feed extends React.Component {
                           (2) provide a string of file extensions separated by a
                           comma (example: <code>pdf,doc,docx,mp4</code>).
                           <br />
-                          <b className="doc">Default value</b> is <b>all</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">licenses</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Licenses
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          Filters the open educational resources based on the
+                          <b className="doc">Default value</b> is <b>all</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"licenses"}
+                        type={"String"}
+                        title={"Material Licenses"}
+                        optional={"true"}
+                        desc={
+                          `Filters the open educational resources based on the
                           provided licenses. One can provide multiple Licenses
                           separated by a comma (example: <code>by,by-nd</code>
                           ). If parameter is <code>cc</code> returns materials
                           that have the license present. If Null, no filtering
                           is performed. Options: cc, by, by-nc, by-sa, by-nd,
                           by-nc-nd, by-nc-sa. <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">languages</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Languages
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The language of the open educational resources. This
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"languages"}
+                        type={"String"}
+                        title={"Material Languages"}
+                        optional={"true"}
+                        desc={
+                          `The language of the open educational resources. This
                           parameter is a string of ISO 639-1 code languages
                           separated by a comma (example: <code>sl,es,de</code>
                           ). If Null, no filtering is performed.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">content_languages</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Content Languages
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The content languages of the open educational
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"content_languages"}
+                        type={"String"}
+                        title={"Material Content Languages"}
+                        optional={"true"}
+                        desc={
+                          `The content languages of the open educational
                           resources. This parameter filters out resources that
                           have content (i.e. transcriptions, translations)
                           available in the provided content languages. It is a
@@ -2532,143 +1209,79 @@ class Feed extends React.Component {
                           comma (example: <code>sl,es,de</code>). If Null, no
                           filtering by content languages is performed.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">provider_ids</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          String
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Provider IDs
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The list of material provider IDs. This parameter
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"provider_ids"}
+                        type={"String"}
+                        title={"Material Provider IDs"}
+                        optional={"true"}
+                        desc={
+                          `The list of material provider IDs. This parameter
                           filters out resources that are associated with the OER
                           providers associated. (example: <code>1,10</code>). If
                           Null, no filtering by providers is done.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">wikipedia</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Boolean
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Material Wikipedia
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          If True, provides the list of Wikipedia concepts
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"wikipedia"}
+                        type={"Boolean"}
+                        title={"Material Wikipedia"}
+                        optional={"true"}
+                        desc={
+                          `If True, provides the list of Wikipedia concepts
                           associated with the resource.
                           <br />
-                          <b className="doc">Default value</b> is <b>False</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">wikipedia_limit</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Wikipedia List Length
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The number of top Wikipedia concepts returned if the{" "}
+                          <b className="doc">Default value</b> is <b>False</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"wikipedia_limit"}
+                        type={"Integer"}
+                        title={"Wikipedia List Length"}
+                        optional={"true"}
+                        desc={
+                          `The number of top Wikipedia concepts returned if the{" "}
                           <code>wikipedia</code> parameter is present. If Null,
                           returns all Wikipedia concepts.
                           <br />
-                          <b className="doc">Default value</b> is <b>Null</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">limit</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Page Limit
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The number of open eduational resources to return. If
+                          <b className="doc">Default value</b> is <b>Null</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"limit"}
+                        type={"Integer"}
+                        title={"Page Limit"}
+                        optional={"true"}
+                        desc={
+                          `The number of open eduational resources to return. If
                           the value is zero or bellow, it automatically returns
                           the default number of resources. If value is greater
                           than 100 returns 100 resources.
                           <br />
-                          <b className="doc">Default value</b> is <b>20</b>.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <b className="doc">page</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
+                          <b className="doc">Default value</b> is <b>20</b>.`
+                        }
+                      ></this.QueryTableRow>
+
+                      <this.QueryTableRow
+                        name={"page"}
+                        type={"Integer"}
+                        title={"Page"}
+                        optional={"true"}
+                        desc={
+                          `The page number of the recommended list.
                           <br />
-                          Integer
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Page
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Optional:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          The page number of the recommended list.
-                          <br />
-                          <b className="doc">Default value</b> is <b>1</b>.
-                        </td>
-                      </tr>
+                          <b className="doc">Default value</b> is <b>1</b>.`
+                        }
+                      ></this.QueryTableRow>
+
                     </tbody>
                   </table>
                 </div>
@@ -2685,30 +1298,16 @@ class Feed extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">query</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          JSON
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Query Parameters
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          A JSON object containing the provided query
-                          parameters.
-                        </td>
-                      </tr>
+                      <this.ResultTableRow
+                        name={"query"}
+                        type={"JSON"}
+                        title={"Query Parameters"}
+                        desc={
+                          `A JSON object containing the provided query
+                          parameters.`
+                        }
+                      ></this.ResultTableRow>
+
                       <tr className="no-top-border">
                         <td colSpan={5}>
                           <b className="doc">query object properties</b>
@@ -2723,103 +1322,48 @@ class Feed extends React.Component {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">text</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Query Text
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The user provided query text.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">type</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Type
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The material type provided.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">page</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Result Page
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The page number of the results.</td>
-                              </tr>
+                              <this.ResultTableRow
+                                name={"text"}
+                                type={"String"}
+                                title={"Query Text"}
+                                desc={
+                                  `The user provided query text.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"type"}
+                                type={"String"}
+                                title={"Query Material Type"}
+                                desc={
+                                  `The material type provided.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"page"}
+                                type={"Integer"}
+                                title={"Result Page"}
+                                desc={
+                                  `The page number of the results.`
+                                }
+                              ></this.ResultTableRow>
+
                             </tbody>
                           </table>
                         </td>
                       </tr>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">rec_materials</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          Array
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Recommended Materials
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          An array of objects, each representing an recommended
-                          open educational resource.
-                        </td>
-                      </tr>
+
+                      <this.ResultTableRow
+                        name={"rec_materials"}
+                        type={"Array"}
+                        title={"Recommended Materials"}
+                        desc={
+                          `An array of objects, each representing an recommended
+                          open educational resource.`
+                        }
+                      ></this.ResultTableRow>
+
                       <tr className="no-top-border">
                         <td colSpan={5}>
                           <b className="doc">rec_materials object properties</b>
@@ -2834,375 +1378,151 @@ class Feed extends React.Component {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">weight</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Float
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Recommendation Weight
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The number representing the relevance of the
+                              <this.ResultTableRow
+                                name={"weight"}
+                                type={"Float"}
+                                title={"Recommendation Weight"}
+                                desc={
+                                  `The number representing the relevance of the
                                   OER material. Greater weight means bigger
-                                  relevance.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">material_id</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material ID
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The unique ID of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">title</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Title
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The title of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">description</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Description
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The description of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">creation_date</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Creation Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The creation date of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">retrieved_date</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Retrieved Date
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The date when the OER material was indexed by
-                                  the platform.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">type</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Type
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The type of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">mimetype</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Mimetype
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The mimetype of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">url</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material URL
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL of the OER material.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">website</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Container URL
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The URL where the OER material is contained on
-                                  the provider's website.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">language</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Language
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The language of the OER material in ISO 639-1
-                                  code.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">license</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Object
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material License
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The JSON object containing the material's
+                                  relevance.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"material_id"}
+                                type={"Integer"}
+                                title={"Material ID"}
+                                desc={
+                                  `The unique ID of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"title"}
+                                type={"String"}
+                                title={"Material Title"}
+                                desc={
+                                  `The title of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"description"}
+                                type={"String"}
+                                title={"Material Description"}
+                                desc={
+                                  `The description of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"creation_date"}
+                                type={"Date"}
+                                title={"Material Creation Date"}
+                                desc={
+                                  `The creation date of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"retrieved_date"}
+                                type={"Date"}
+                                title={"Material Retrieved Date"}
+                                desc={
+                                  `The date when the OER material was indexed by
+                                  the platform.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"type"}
+                                type={"String"}
+                                title={"Material Type"}
+                                desc={
+                                  `The type of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"mimetype"}
+                                type={"String"}
+                                title={"Material Mimetype"}
+                                desc={
+                                  `The mimetype of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"url"}
+                                type={"String"}
+                                title={"Material URL"}
+                                desc={
+                                  `The URL of the OER material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"website"}
+                                type={"String"}
+                                title={"Material Container URL"}
+                                desc={
+                                  `The URL where the OER material is contained on
+                                  the provider's website.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"language"}
+                                type={"String"}
+                                title={"Material Language"}
+                                desc={
+                                  `The language of the OER material in ISO 639-1
+                                  code.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"license"}
+                                type={"Object"}
+                                title={"Material License"}
+                                desc={
+                                  `The JSON object containing the material's
                                   short_name, typed_name, disclaimer and license
-                                  URL.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">provider</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Object
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Provider
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  The JSON object containing the provider's id,
-                                  name and domain values.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">content_ids</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Content IDs
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The array of material's content IDs.</td>
-                              </tr>
-                              <tr className="no-bottom-border">
-                                <td>
-                                  <b className="doc">wikipedia</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Array
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Material Wikipedia Concepts
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>
-                                  An array of objects, each representing the
+                                  URL.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"provider"}
+                                type={"Object"}
+                                title={"Material Provider"}
+                                desc={
+                                  `The JSON object containing the provider's id,
+                                  name and domain values.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"content_ids"}
+                                type={"Array"}
+                                title={"Material Content IDs"}
+                                desc={
+                                  `The array of material's content IDs.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"wikipedia"}
+                                type={"Array"}
+                                title={"Material Wikipedia Concepts"}
+                                desc={
+                                  `An array of objects, each representing the
                                   most relevant wikipedia concept of the
-                                  material.
-                                </td>
-                              </tr>
+                                  material.`
+                                }
+                              ></this.ResultTableRow>
+
                               <tr className="no-top-border">
                                 <td colSpan={5}>
                                   <b className="doc">
@@ -3219,67 +1539,26 @@ class Feed extends React.Component {
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">concept</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          String
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The Wikipedia concept represented as
-                                          an URL.
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <b className="doc">support</b>
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Type:
-                                          </span>
-                                          <br />
-                                          Integer
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Title:
-                                          </span>
-                                          <br />
-                                          Wikipedia Concept Support
-                                        </td>
-                                        <td>
-                                          <span className="doc doc--small">
-                                            Read only:
-                                          </span>
-                                          <br />
-                                          true
-                                        </td>
-                                        <td>
-                                          The amount of elements in the material
+                                      <this.ResultTableRow
+                                        name={"concept"}
+                                        type={"String"}
+                                        title={"Wikipedia Concept"}
+                                        desc={
+                                          `The Wikipedia concept represented as
+                                          an URL.`
+                                        }
+                                      ></this.ResultTableRow>
+
+                                      <this.ResultTableRow
+                                        name={"support"}
+                                        type={"Integer"}
+                                        title={"Wikipedia Concept Support"}
+                                        desc={
+                                          `The amount of elements in the material
                                           that support the given Wikipedia
-                                          concept.
-                                        </td>
-                                      </tr>
+                                          concept.`
+                                        }
+                                      ></this.ResultTableRow>
                                     </tbody>
                                   </table>
                                 </td>
@@ -3288,30 +1567,17 @@ class Feed extends React.Component {
                           </table>
                         </td>
                       </tr>
-                      <tr className="no-bottom-border">
-                        <td>
-                          <b className="doc">metadata</b>
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Type:</span>
-                          <br />
-                          JSON
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Title:</span>
-                          <br />
-                          Result Metadata
-                        </td>
-                        <td>
-                          <span className="doc doc--small">Read only:</span>
-                          <br />
-                          true
-                        </td>
-                        <td>
-                          A JSON object containing the associated metadata.
-                          Helpful for navigating through the recommendations.
-                        </td>
-                      </tr>
+
+                      <this.ResultTableRow
+                        name={"metadata"}
+                        type={"JSON"}
+                        title={"Result Metadata"}
+                        desc={
+                          `A JSON object containing the associated metadata.
+                          Helpful for navigating through the recommendations.`
+                        }
+                      ></this.ResultTableRow>
+
                       <tr className="no-top-border">
                         <td colSpan={5}>
                           <b className="doc">metadata object properties</b>
@@ -3326,98 +1592,42 @@ class Feed extends React.Component {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>
-                                  <b className="doc">total_hits</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Number of Found Materials
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>Number of most relevant material .</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">total_pages</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  Integer
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Total Pages
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The total number of result pages.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">prev_page</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Previous Page
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL to the previous result page.</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <b className="doc">next_page</b>
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Type:</span>
-                                  <br />
-                                  String
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">Title:</span>
-                                  <br />
-                                  Next Page
-                                </td>
-                                <td>
-                                  <span className="doc doc--small">
-                                    Read only:
-                                  </span>
-                                  <br />
-                                  true
-                                </td>
-                                <td>The URL to the next result page.</td>
-                              </tr>
+                              <this.ResultTableRow
+                                name={"total_hits"}
+                                type={"Integer"}
+                                title={"Number of Found Materials"}
+                                desc={
+                                  `Number of most relevant material.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"total_pages"}
+                                type={"Integer"}
+                                title={"Total Pages"}
+                                desc={
+                                  `The total number of result pages.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"prev_page"}
+                                type={"String"}
+                                title={"Previous Page"}
+                                desc={
+                                  `The URL to the previous result page.`
+                                }
+                              ></this.ResultTableRow>
+
+                              <this.ResultTableRow
+                                name={"next_page"}
+                                type={"String"}
+                                title={"Next Page"}
+                                desc={
+                                  `The URL to the next result page.`
+                                }
+                              ></this.ResultTableRow>
+
                             </tbody>
                           </table>
                         </td>
@@ -6800,6 +5010,80 @@ class Feed extends React.Component {
       </div>
     );
   };
+
+  QueryTableRow = props => {
+    const {
+      name,
+      type,
+      title,
+      optional,
+      desc
+    } = props;
+
+    return (
+      <tr>
+        <td>
+          <b className="doc">{name}</b>
+        </td>
+        <td>
+          <span className="doc doc--small">Type:</span>
+          <br />
+          {type}
+        </td>
+        <td>
+          <span className="doc doc--small">Title:</span>
+          <br />
+          {title}
+        </td>
+        <td>
+          <span className="doc doc--small">Optional:</span>
+          <br />
+          {optional}
+        </td>
+        <td dangerouslySetInnerHTML={{ __html: desc }}></td>
+      </tr>
+    );
+  };
+
+  ResultTableRow = props => {
+    const {
+      name,
+      type,
+      title,
+      desc
+    } = props;
+
+    return (
+      <tr>
+        <td>
+          <b className="doc">{name}</b>
+        </td>
+        <td>
+          <span className="doc doc--small">
+            Type:
+          </span>
+          <br />
+          {type}
+        </td>
+        <td>
+          <span className="doc doc--small">
+            Title:
+          </span>
+          <br />
+          {title}
+        </td>
+        <td>
+          <span className="doc doc--small">
+            Read only:
+          </span>
+          <br />
+          true
+        </td>
+        <td dangerouslySetInnerHTML={{ __html: desc }}></td>
+      </tr>
+    );
+  };
+
   Content = () => {
     return (
       <div>
