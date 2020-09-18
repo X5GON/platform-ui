@@ -83,7 +83,7 @@ class Homepage extends React.Component {
         title: "Relevant and Tailormade",
         color: "#00134d",
         text:
-          "With Machine Learning for Quality Assurancee we are semantically connecting, ranking and personalizing OER depending on users and content patterns.",
+          "With Machine Learning for Quality Assurance we are semantically connecting, ranking and personalizing OER depending on users and content patterns.",
       },
       {
         title: "Global and Truly Inclusive",
