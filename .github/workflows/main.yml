@@ -24,7 +24,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd ../../x5gon/x5gon-platform/src/services/platform/frontend
+            cd ../../x5gon/x5gon-platform/platform/frontend
             git pull
             npm install
             npm run-script build
