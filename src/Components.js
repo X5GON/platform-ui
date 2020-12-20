@@ -289,6 +289,7 @@ export const MoreProducts = props => {
       todo: "Analytics",
       text: "Understand the trends of your content usage",
       link: "analytics",
+      tryLink: "https://wp3.x5gon.org/lamapidoc",
       image: "analytics.png",
     },
     {
@@ -328,12 +329,14 @@ export const MoreProducts = props => {
       todo: "Code",
       text: "Complete software on GitHub",
       link: "code",
+      tryLink: "https://github.com/X5GON",
       image: "code.jpg",
     },
     {
       todo: "Moodle plugin",
       text: "Accessing OER from MOODLE through AI tools",
       link: "moodle",
+      tryLink: "https://wp3.x5gon.org/moodle/login/index.php",
       image: "moodle.jpg",
     },
   ];
