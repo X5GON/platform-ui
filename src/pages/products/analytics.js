@@ -42,7 +42,7 @@ export default class Analytics extends React.Component {
             description: "Understand the trends of your content usage",
             button: {
               text: "Try Now",
-              link: "",
+              externalLink: "https://wp3.x5gon.org/lamapidoc",
             },
           }}
         />
