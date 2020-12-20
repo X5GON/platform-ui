@@ -299,6 +299,13 @@ export const MoreProducts = props => {
       image: "discovery.png",
     },
     {
+      todo: "Blind",
+      text: "Platform and assistant for the viasually impaired",
+      link: "blind",
+      tryLink: "https://blind.x5gon.org",
+      image: "blind.jpg",
+    },
+    {
       todo: "Translate",
       text: "Translate your content in every format",
       link: "translate",
