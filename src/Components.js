@@ -324,6 +324,18 @@ export const MoreProducts = props => {
       link: "feed",
       image: "feed.png",
     },
+    {
+      todo: "Code",
+      text: "Complete software on GitHub",
+      link: "code",
+      image: "code.jpg",
+    },
+    {
+      todo: "Moodle plugin",
+      text: "Accessing OER from MOODLE through AI tools",
+      link: "moodle",
+      image: "moodle.jpg",
+    },
   ];
   const current = props.current;
   const CheckIfOthers = array => {
