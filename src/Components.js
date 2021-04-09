@@ -301,10 +301,10 @@ export const MoreProducts = props => {
     },
     {
       todo: "Blind",
-      text: "Platform and assistant for the viasually impaired",
+      text: "Platform and assistant for the visually impaired",
       link: "blind",
       tryLink: "https://blind.x5gon.org",
-      image: "blind.jpg",
+      image: "blind.png",
     },
     {
       todo: "Translate",
@@ -330,14 +330,14 @@ export const MoreProducts = props => {
       text: "Complete software on GitHub",
       link: "code",
       tryLink: "https://github.com/X5GON",
-      image: "code.jpg",
+      image: "code.png",
     },
     {
       todo: "Moodle plugin",
       text: "Accessing OER from MOODLE through AI tools",
       link: "moodle",
       tryLink: "https://wp3.x5gon.org/moodle/login/index.php",
-      image: "moodle.jpg",
+      image: "moodle.png",
     },
   ];
   const current = props.current;
